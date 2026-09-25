@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'kevinpirnie/theme-framework',
+        'name' => 'kevinpirnie/pn-vr',
         'pretty_version' => '1.0.1',
         'version' => '1.0.1.0',
         'reference' => null,
@@ -19,7 +19,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'kevinpirnie/theme-framework' => array(
+        'kevinpirnie/pn-vr' => array(
             'pretty_version' => '1.0.1',
             'version' => '1.0.1.0',
             'reference' => null,

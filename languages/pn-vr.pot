@@ -2,21 +2,21 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: KP Theme Framework 1.0.1\n"
+"Project-Id-Version: PodNest Visual Regressor 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wptheme-podnest-vr\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-25T18:28:38+00:00\n"
+"POT-Creation-Date: 2026-09-25T20:34:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: kpf\n"
+"X-Domain: pn-vr\n"
 
 #. Theme Name of the theme
 #: style.css
-msgid "KP Theme Framework"
+msgid "PodNest Visual Regressor"
 msgstr ""
 
 #. Theme URI of the theme
@@ -27,7 +27,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "A modern WordPress parent theme framework with CSS framework selection. Supports Bootstrap, UIKit, Tailwind CSS, Foundation, and Bulma."
+msgid "Marketing theme for PodNest Visual Regressor, built on Tailwind CSS."
 msgstr ""
 
 #. Author of the theme
@@ -35,7 +35,22 @@ msgstr ""
 msgid "Kevin Pirnie"
 msgstr ""
 
-#: header.php:20
+#: footer.php:14
+#: header.php:28
+msgid "PodNest Visual Regressor - Home"
+msgstr ""
+
+#. translators: 1: the current year, 2: link to kevinpirnie.com
+#: footer.php:38
+#, php-format
+msgid "Copyright &copy; %1$s %2$s. All Rights Reserved."
+msgstr ""
+
+#: footer.php:58
+msgid "Scroll to top"
+msgstr ""
+
+#: header.php:24
 msgid "Skip to content"
 msgstr ""
 
@@ -43,429 +58,1368 @@ msgstr ""
 msgid "No content found."
 msgstr ""
 
-#: work/inc/kpf-settings.php:81
-msgid "KP Framework Theme Settings"
+#. Template Name of the theme
+#: page-templates/support.php:23
+msgid "Support"
 msgstr ""
 
-#: work/inc/kpf-settings.php:82
-msgid "KPF Settings"
+#: page-templates/support.php:24
+msgid "Questions about a plan, a trial account, or buying the source? Send us a note."
 msgstr ""
 
-#: work/inc/kpf-settings.php:96
-msgid "Save Theme Settings"
+#: page-templates/support.php:44
+msgid "Getting help"
 msgstr ""
 
-#: work/inc/kpf-settings.php:97
-msgid "<p class=\"alignright\">Copyright &copy; "
+#: page-templates/support.php:48
+msgid "Already a customer?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:121
-msgid "Framework"
+#: page-templates/support.php:49
+msgid "Trial and Paid accounts get help at the PodNest support center, where your tickets and their history live."
 msgstr ""
 
-#: work/inc/kpf-settings.php:128
-msgid "CSS Framework"
+#: page-templates/support.php:50
+msgid "Open a Support Ticket"
 msgstr ""
 
-#: work/inc/kpf-settings.php:129
-msgid "Picking a framework here will automatically load in everything needed for you to utilize it.<br /><strong>NOTE: </strong>Once you make a selection, you will be able to choose the version to utilize, and whether or not you want to load it from the CDN."
+#: page-templates/support.php:55
+msgid "Bought the Source Code?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:131
-#: work/inc/kpf-settings.php:416
-#: work/inc/kpf-settings.php:428
-msgid "None"
+#: page-templates/support.php:56
+msgid "Open an issue on the private GitHub repository you were given access to. Personalized support is available at an extra cost."
 msgstr ""
 
-#: work/inc/kpf-settings.php:132
-msgid "Bootstrap"
+#: page-templates/support.php:61
+msgid "Anything else"
 msgstr ""
 
-#: work/inc/kpf-settings.php:133
-msgid "UIKit"
+#: page-templates/support.php:62
+msgid "Plans, trials, a source code purchase, or a question we have not thought of yet: use the form."
 msgstr ""
 
-#: work/inc/kpf-settings.php:134
-msgid "Tailwind"
+#: template-parts/brand/wordmark.php:22
+msgid "Visual Regressor"
 msgstr ""
 
-#: work/inc/kpf-settings.php:135
-msgid "Foundation"
+#: template-parts/brand/wordmark.php:23
+msgid "Screenshot & Content Comparison"
 msgstr ""
 
-#: work/inc/kpf-settings.php:136
-msgid "Bulma"
+#: template-parts/contact/form.php:24
+msgid "Contact form"
 msgstr ""
 
-#: work/inc/kpf-settings.php:137
-msgid "Materialize"
+#: template-parts/contact/form.php:36
+msgid "First Name"
 msgstr ""
 
-#: work/inc/kpf-settings.php:145
-msgid "Load from CDN?"
+#: template-parts/contact/form.php:37
+msgid "Jane"
 msgstr ""
 
-#: work/inc/kpf-settings.php:147
-msgid "Should we load the framework from the CDN? (cdn.jsdelivr.net)"
+#: template-parts/contact/form.php:40
+msgid "Last Name"
 msgstr ""
 
-#: work/inc/kpf-settings.php:148
-#: work/inc/kpf-settings.php:260
-#: work/inc/kpf-settings.php:269
-#: work/inc/kpf-settings.php:278
-#: work/inc/kpf-settings.php:287
-#: work/inc/kpf-settings.php:296
-#: work/inc/kpf-settings.php:361
-#: work/inc/kpf-settings.php:370
-#: work/inc/kpf-settings.php:379
-#: work/inc/kpf-settings.php:491
-#: work/inc/kpf-settings.php:512
-#: work/inc/kpf-settings.php:562
-#: work/inc/kpf-settings.php:571
-#: work/inc/kpf-settings.php:580
-#: work/inc/kpf-settings.php:590
-#: work/inc/kpf-settings.php:599
-#: work/inc/kpf-settings.php:608
-#: work/inc/kpf-settings.php:617
-msgid "Yes"
+#: template-parts/contact/form.php:41
+msgid "Smith"
 msgstr ""
 
-#: work/inc/kpf-settings.php:149
-#: work/inc/kpf-settings.php:261
-#: work/inc/kpf-settings.php:270
-#: work/inc/kpf-settings.php:279
-#: work/inc/kpf-settings.php:288
-#: work/inc/kpf-settings.php:297
-#: work/inc/kpf-settings.php:362
-#: work/inc/kpf-settings.php:371
-#: work/inc/kpf-settings.php:380
-#: work/inc/kpf-settings.php:492
-#: work/inc/kpf-settings.php:513
-#: work/inc/kpf-settings.php:563
-#: work/inc/kpf-settings.php:572
-#: work/inc/kpf-settings.php:581
-#: work/inc/kpf-settings.php:591
-#: work/inc/kpf-settings.php:600
-#: work/inc/kpf-settings.php:609
-#: work/inc/kpf-settings.php:618
-msgid "No"
+#: template-parts/contact/form.php:47
+msgid "Email Address"
 msgstr ""
 
-#: work/inc/kpf-settings.php:161
-msgid "Tailwind plays a bit differently, you will need to utilize it's build processes in order to use this framework.<br />See here for more information: <a href=\"https://tailwindcss.com/docs/installation/using-vite\" target=\"_blank\">https://tailwindcss.com/docs/installation/using-vite</a>"
+#: template-parts/contact/form.php:48
+msgid "jane@example.com"
 msgstr ""
 
-#: work/inc/kpf-settings.php:192
-msgid "SMTP"
+#: template-parts/contact/form.php:51
+#: work/inc/pnvr-contact.php:365
+msgid "Phone"
 msgstr ""
 
-#: work/inc/kpf-settings.php:215
-msgid "Cookie Notice"
+#: template-parts/contact/form.php:52
+msgid "+1 (555) 000-0000"
 msgstr ""
 
-#: work/inc/kpf-settings.php:238
-msgid "Security"
+#: template-parts/contact/form.php:57
+#: work/inc/pnvr-contact.php:367
+#: work/inc/pnvr-contact.php:418
+msgid "Subject"
 msgstr ""
 
-#: work/inc/kpf-settings.php:246
-msgid "REST API?"
+#: template-parts/contact/form.php:58
+msgid "How can we help?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:247
-msgid "Should we disable the REST API?"
+#: template-parts/contact/form.php:62
+#: work/inc/pnvr-contact.php:368
+msgid "Message"
 msgstr ""
 
-#: work/inc/kpf-settings.php:249
-#: work/inc/kpf-settings.php:307
-msgid "Get Rid of It!"
+#: template-parts/contact/form.php:63
+msgid "Tell us about your sites, or your question..."
 msgstr ""
 
-#: work/inc/kpf-settings.php:250
-msgid "Only on the Front-End"
+#: template-parts/contact/form.php:70
+msgid "Send Message"
 msgstr ""
 
-#: work/inc/kpf-settings.php:251
-#: work/inc/kpf-settings.php:309
-msgid "No Way!"
+#: template-parts/contact/form.php:74
+msgid "Protected by reCAPTCHA."
 msgstr ""
 
-#: work/inc/kpf-settings.php:258
-msgid "Aplication Passwords?"
+#: template-parts/hero/compare-slider.php:29
+msgid "visual regressor / compare"
 msgstr ""
 
-#: work/inc/kpf-settings.php:259
-msgid "Should we disable Application Passwords?"
+#: template-parts/hero/compare-slider.php:44
+msgid "Drag to compare the baseline and candidate screenshots"
 msgstr ""
 
-#: work/inc/kpf-settings.php:267
-msgid "Remove Feeds?"
+#: template-parts/hero/compare-slider.php:48
+msgid "Pixel diff"
 msgstr ""
 
-#: work/inc/kpf-settings.php:268
-msgid "Should we remove all RSS Feeds?"
+#: template-parts/hero/compare-slider.php:49
+msgid "Expected content"
 msgstr ""
 
-#: work/inc/kpf-settings.php:276
-msgid "Remove RPC?"
+#: template-parts/hero/compare-slider.php:50
+msgid "AI verdict"
 msgstr ""
 
-#: work/inc/kpf-settings.php:277
-msgid "Should we remove the XML RPC?"
+#: template-parts/hero/compare-slider.php:50
+#: template-parts/illustrations/ai-review.php:58
+#: template-parts/sections/ai-judge.php:24
+msgid "Warn"
 msgstr ""
 
-#: work/inc/kpf-settings.php:285
-msgid "Remove Identifiers?"
+#: template-parts/hero/compare-slider.php:53
+msgid "A before and after comparison of the same page, with the differences outlined."
 msgstr ""
 
-#: work/inc/kpf-settings.php:286
-msgid "Should we remove the WordPress Identifiers?"
+#: template-parts/hero/placeholder.php:17
+msgid "Candidate page screenshot"
 msgstr ""
 
-#: work/inc/kpf-settings.php:294
-msgid "Remove Admin-Bar?"
+#: template-parts/hero/placeholder.php:17
+msgid "Baseline page screenshot"
 msgstr ""
 
-#: work/inc/kpf-settings.php:295
-msgid "Should we remove the admin bar on the front-end?"
+#: template-parts/illustrations/ai-review.php:15
+msgid "Styling"
 msgstr ""
 
-#: work/inc/kpf-settings.php:304
-msgid "Remove Commenting?"
+#: template-parts/illustrations/ai-review.php:15
+msgid "The primary button changed from blue to orange and grew wider."
 msgstr ""
 
-#: work/inc/kpf-settings.php:305
-msgid "Should we remove commenting?"
+#: template-parts/illustrations/ai-review.php:16
+msgid "Layout"
 msgstr ""
 
-#: work/inc/kpf-settings.php:308
-msgid "Only for the Selected Post Types!"
+#: template-parts/illustrations/ai-review.php:16
+msgid "The hero image moved 16px down. Nothing overlaps."
 msgstr ""
 
-#: work/inc/kpf-settings.php:317
-#: work/inc/kpf-settings.php:498
-#: work/inc/kpf-settings.php:519
-msgid "Post Types"
-msgstr ""
-
-#: work/inc/kpf-settings.php:318
-msgid "This will remove the commenting capabilities from the selected post types."
-msgstr ""
-
-#: work/inc/kpf-settings.php:352
-msgid "Imagery"
-msgstr ""
-
-#: work/inc/kpf-settings.php:359
-msgid "Allow SVGs?"
-msgstr ""
-
-#: work/inc/kpf-settings.php:360
-msgid "Should we allow SVG images to be uploaded to the media library?"
-msgstr ""
-
-#: work/inc/kpf-settings.php:368
-msgid "Allow WEBPs?"
-msgstr ""
-
-#: work/inc/kpf-settings.php:369
-msgid "Should we allow WEBP imagess to be uploaded to the media library?"
-msgstr ""
-
-#: work/inc/kpf-settings.php:377
-msgid "Convert Images?"
-msgstr ""
-
-#: work/inc/kpf-settings.php:378
-msgid "Should we attempt to convert images uploaded to webp format?"
-msgstr ""
-
-#: work/inc/kpf-settings.php:386
-msgid "Extra Image Sizes"
-msgstr ""
-
-#: work/inc/kpf-settings.php:387
-msgid "Existing Sizes:<br />"
-msgstr ""
-
-#: work/inc/kpf-settings.php:388
-msgid "This will add additional image sizes. WordPress will automagically create them on upload.<br /><strong>NOTE: </strong>If you already have images uploaded, you will need to regenerate your thumbnails."
-msgstr ""
-
-#: work/inc/kpf-settings.php:393
-msgid "Size Name"
-msgstr ""
-
-#: work/inc/kpf-settings.php:402
-msgid "Image Width"
-msgstr ""
-
-#: work/inc/kpf-settings.php:403
-#: work/inc/kpf-settings.php:409
-msgid "in pixels"
-msgstr ""
-
-#: work/inc/kpf-settings.php:408
-msgid "Image Height"
-msgstr ""
-
-#: work/inc/kpf-settings.php:414
-msgid "Crop Vertical"
-msgstr ""
-
-#: work/inc/kpf-settings.php:417
-msgid "Top"
-msgstr ""
-
-#: work/inc/kpf-settings.php:418
-#: work/inc/kpf-settings.php:430
-msgid "Center"
-msgstr ""
-
-#: work/inc/kpf-settings.php:419
-msgid "Bottom"
-msgstr ""
-
-#: work/inc/kpf-settings.php:426
-msgid "Crop Horizontal"
-msgstr ""
-
-#: work/inc/kpf-settings.php:429
-msgid "Left"
-msgstr ""
-
-#: work/inc/kpf-settings.php:431
-msgid "Right"
-msgstr ""
-
-#: work/inc/kpf-settings.php:464
+#: template-parts/illustrations/ai-review.php:17
+#: work/inc/pnvr-settings.php:402
 msgid "Content"
 msgstr ""
 
-#: work/inc/kpf-settings.php:471
+#: template-parts/illustrations/ai-review.php:17
+msgid "The second card's image was swapped. It looks like rotating promo content."
+msgstr ""
+
+#: template-parts/illustrations/ai-review.php:28
+msgid "The diff image, with three changed regions highlighted"
+msgstr ""
+
+#: template-parts/illustrations/ai-review.php:60
+msgid "Confidence"
+msgstr ""
+
+#: template-parts/illustrations/ai-review.php:66
+msgid "The page changed in styling and layout, and one image was swapped. All expected content is present. Nothing looks broken, but the button change needs a human to confirm it was intended."
+msgstr ""
+
+#: template-parts/illustrations/ai-review.php:75
+msgid "An example AI review: a warn verdict at 0.87 confidence, with three findings."
+msgstr ""
+
+#: template-parts/navigation/primary.php:13
+msgid "Toggle navigation menu"
+msgstr ""
+
+#: template-parts/navigation/primary.php:17
+msgid "Primary"
+msgstr ""
+
+#: template-parts/navigation/primary.php:30
+#: work/inc/pnvr-post-types.php:77
+msgid "Features"
+msgstr ""
+
+#: template-parts/navigation/primary.php:31
+#: template-parts/sections/how-it-works.php:25
+msgid "How It Works"
+msgstr ""
+
+#: template-parts/navigation/primary.php:32
+#: template-parts/sections/ai-judge.php:32
+msgid "AI Judge"
+msgstr ""
+
+#: template-parts/navigation/primary.php:33
+#: template-parts/sections/pricing.php:81
+#: work/inc/pnvr-post-types.php:83
+msgid "Pricing"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:15
+msgid "Verdicts you can act on"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:15
+msgid "Pass, warn, or fail, with a confidence, a one-line summary, and the findings behind it."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:16
+msgid "Expectations are absolute"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:16
+msgid "A missing expected string fails the comparison, whatever the model says."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:17
+msgid "Never a silent pass"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:17
+msgid "If the AI call fails, the comparison degrades to warn and says why. It never quietly passes."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:18
+msgid "Your model, your key"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:18
+msgid "Anthropic or any OpenAI-compatible endpoint, with prompt caching to keep repeat runs cheap."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:23
+msgid "Pass"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:23
+msgid "Nothing that matters changed."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:24
+msgid "Something changed. Worth a human look."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:25
+msgid "Fail"
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:25
+msgid "A real regression, or missing content."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:33
+msgid "Knows a rotating advert from a real regression."
+msgstr ""
+
+#: template-parts/sections/ai-judge.php:34
+msgid "A pixel diff tells you something changed. The AI judge tells you whether it matters, reading the screenshots, the diff, and the text of both pages the way a reviewer would."
+msgstr ""
+
+#: template-parts/sections/cta.php:14
+msgid "Get Started"
+msgstr ""
+
+#: template-parts/sections/cta.php:15
+msgid "Stop Eyeballing Staging."
+msgstr ""
+
+#: template-parts/sections/cta.php:16
+msgid "Trial accounts are set up by hand. Tell us a little about your sites and we will get you comparing."
+msgstr ""
+
+#: template-parts/sections/cta.php:18
+msgid "Start a Free Trial"
+msgstr ""
+
+#: template-parts/sections/cta.php:19
+msgid "Sign In"
+msgstr ""
+
+#: template-parts/sections/features.php:20
+msgid "Capabilities"
+msgstr ""
+
+#: template-parts/sections/features.php:21
+msgid "Everything a Visual Regression Run Needs"
+msgstr ""
+
+#: template-parts/sections/features.php:22
+msgid "Screenshots, diffs, content checks, an AI verdict, a crawl for broken links, and a report you can hand to a client. One container, one run."
+msgstr ""
+
+#: template-parts/sections/features.php:39
+msgid "Learn more"
+msgstr ""
+
+#: template-parts/sections/features.php:45
+msgid "Add Feature posts under VR Content > Features. Only editors see this notice."
+msgstr ""
+
+#: template-parts/sections/hero.php:15
+msgid "Comparison"
+msgstr ""
+
+#: template-parts/sections/hero.php:16
+msgid "Verdicts"
+msgstr ""
+
+#: template-parts/sections/hero.php:17
+msgid "Mandatory"
+msgstr ""
+
+#: template-parts/sections/hero.php:18
+msgid "Reports"
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:15
+msgid "Capture"
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:15
+msgid "Headless Chromium loads both URLs, with per-URL basic auth, frozen animations, and masked selectors for sliders and cookie banners, then screenshots them."
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:16
+msgid "Compare"
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:16
+msgid "A pixel-for-pixel diff with a tolerance and threshold, plus a check that every expected string is in the rendered text of both pages."
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:17
+msgid "Judge"
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:17
+msgid "The screenshots, the diff, the measurements, and both pages' text go to your AI model, which returns a verdict, a confidence, a summary, and its findings."
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:18
+msgid "Report"
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:18
+msgid "Results land as each comparison finishes. Download the run as a PDF, email it to the project's recipients, or mark a known change as a manual pass."
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:26
+msgid "Capture. Compare. Judge. Report."
+msgstr ""
+
+#: template-parts/sections/how-it-works.php:27
+msgid "Every run walks the same four steps for every comparison in the project, and the results show up while the run is still going."
+msgstr ""
+
+#: template-parts/sections/marquee.php:17
+msgid "Pixel-for-Pixel Diffs"
+msgstr ""
+
+#: template-parts/sections/marquee.php:18
+msgid "Expected Content Checks"
+msgstr ""
+
+#: template-parts/sections/marquee.php:19
+msgid "AI Verdicts: Pass · Warn · Fail"
+msgstr ""
+
+#: template-parts/sections/marquee.php:20
+msgid "Anthropic or OpenAI-Compatible"
+msgstr ""
+
+#: template-parts/sections/marquee.php:21
+msgid "Same-Host Spider"
+msgstr ""
+
+#: template-parts/sections/marquee.php:22
+msgid "PDF Run Reports"
+msgstr ""
+
+#: template-parts/sections/marquee.php:23
+msgid "Emailed Reports"
+msgstr ""
+
+#: template-parts/sections/marquee.php:24
+msgid "Manual Pass with Note"
+msgstr ""
+
+#: template-parts/sections/marquee.php:25
+msgid "Per-URL Basic Auth"
+msgstr ""
+
+#: template-parts/sections/marquee.php:26
+#: template-parts/sections/pricing.php:38
+#: template-parts/sections/security.php:15
+msgid "Mandatory TOTP 2FA"
+msgstr ""
+
+#: template-parts/sections/marquee.php:27
+#: template-parts/sections/security.php:22
+msgid "Full Audit Log"
+msgstr ""
+
+#: template-parts/sections/marquee.php:28
+msgid "Multi-Arch Container Images"
+msgstr ""
+
+#: template-parts/sections/pricing.php:27
+msgid "Projects"
+msgstr ""
+
+#: template-parts/sections/pricing.php:27
+#: template-parts/sections/pricing.php:28
+#: template-parts/sections/pricing.php:29
+msgid "Unlimited"
+msgstr ""
+
+#: template-parts/sections/pricing.php:28
+msgid "Comparisons"
+msgstr ""
+
+#: template-parts/sections/pricing.php:29
+msgid "Runs per day"
+msgstr ""
+
+#: template-parts/sections/pricing.php:30
+msgid "Pixel diff & expected content checks"
+msgstr ""
+
+#: template-parts/sections/pricing.php:31
+msgid "Per-URL HTTP basic auth"
+msgstr ""
+
+#: template-parts/sections/pricing.php:32
+msgid "Manual pass with note"
+msgstr ""
+
+#: template-parts/sections/pricing.php:33
+msgid "AI verdicts"
+msgstr ""
+
+#: template-parts/sections/pricing.php:34
+msgid "Spider for 4xx / 5xx responses"
+msgstr ""
+
+#: template-parts/sections/pricing.php:35
+msgid "PDF run reports"
+msgstr ""
+
+#: template-parts/sections/pricing.php:36
+msgid "Emailed run reports"
+msgstr ""
+
+#: template-parts/sections/pricing.php:37
+msgid "Team users & project assignment"
+msgstr ""
+
+#: template-parts/sections/pricing.php:50
+msgid "Included"
+msgstr ""
+
+#: template-parts/sections/pricing.php:50
+msgid "Not included"
+msgstr ""
+
+#: template-parts/sections/pricing.php:63
+msgid "Custom"
+msgstr ""
+
+#: template-parts/sections/pricing.php:66
+msgid "Free"
+msgstr ""
+
+#: template-parts/sections/pricing.php:82
+msgid "Start Free. Scale When It Earns Its Keep."
+msgstr ""
+
+#: template-parts/sections/pricing.php:83
+msgid "Try it on a trial account, run it hosted with every feature switched on, or buy the source and run it on your own servers."
+msgstr ""
+
+#: template-parts/sections/pricing.php:91
+msgid "Billing period"
+msgstr ""
+
+#: template-parts/sections/pricing.php:93
+msgid "Monthly"
+msgstr ""
+
+#: template-parts/sections/pricing.php:95
+msgid "Annual"
+msgstr ""
+
+#: template-parts/sections/pricing.php:120
+#: template-parts/sections/pricing.php:127
+msgid "/ month"
+msgstr ""
+
+#: template-parts/sections/pricing.php:126
+msgid "/ year"
+msgstr ""
+
+#: template-parts/sections/pricing.php:149
+#: work/inc/pnvr-post-types.php:194
+msgid "Get in Touch"
+msgstr ""
+
+#: template-parts/sections/pricing.php:156
+msgid "Add Pricing Tier posts under VR Content > Pricing. Only editors see this notice."
+msgstr ""
+
+#: template-parts/sections/pricing.php:160
+msgid "Trial vs Paid"
+msgstr ""
+
+#: template-parts/sections/pricing.php:163
+msgid "What a trial account includes compared to a paid account"
+msgstr ""
+
+#: template-parts/sections/pricing.php:166
+#: work/inc/pnvr-post-types.php:77
+msgid "Feature"
+msgstr ""
+
+#: template-parts/sections/pricing.php:167
+msgid "Trial"
+msgstr ""
+
+#: template-parts/sections/pricing.php:168
+msgid "Paid"
+msgstr ""
+
+#. translators: %s: link to support.podnest.us
+#: template-parts/sections/pricing.php:186
+#, php-format
+msgid "Source Code buyers get the private repository and every update pushed to it, with generic support through GitHub Issues. Trial and Paid customers get support at %s."
+msgstr ""
+
+#: template-parts/sections/security.php:15
+msgid "Every account enrolls an authenticator, with twelve single-use recovery codes and optional remembered browsers."
+msgstr ""
+
+#: template-parts/sections/security.php:16
+msgid "Argon2id Passwords"
+msgstr ""
+
+#: template-parts/sections/security.php:16
+msgid "Passwords are hashed with Argon2id, and sessions live server-side with a hard seven-day ceiling."
+msgstr ""
+
+#: template-parts/sections/security.php:17
+msgid "Encrypted Secrets"
+msgstr ""
+
+#: template-parts/sections/security.php:17
+msgid "Basic auth credentials, API keys, and the SMTP password are encrypted at rest, so a copy of the database is not a copy of your secrets."
+msgstr ""
+
+#: template-parts/sections/security.php:18
+msgid "Signed Screenshot Links"
+msgstr ""
+
+#: template-parts/sections/security.php:18
+msgid "Screenshots are only served with a signed token that covers one run and lapses after an hour."
+msgstr ""
+
+#: template-parts/sections/security.php:19
+msgid "Throttling & Lockout"
+msgstr ""
+
+#: template-parts/sections/security.php:19
+msgid "Sign-in and 2FA attempts are limited per address and per account, and every form post carries a CSRF token."
+msgstr ""
+
+#: template-parts/sections/security.php:20
+msgid "Private Network Guard"
+msgstr ""
+
+#: template-parts/sections/security.php:20
+msgid "URLs that resolve to private, loopback, or reserved addresses are refused when they are saved, and again when they are captured."
+msgstr ""
+
+#: template-parts/sections/security.php:21
+msgid "Roles & Assignment"
+msgstr ""
+
+#: template-parts/sections/security.php:21
+msgid "Admin, Manager, Trial, and User levels, with project assignment deciding who sees what."
+msgstr ""
+
+#: template-parts/sections/security.php:22
+msgid "Every change is recorded with who, when, and from where, plus the values before and after. Secrets are only noted as changed."
+msgstr ""
+
+#: template-parts/sections/security.php:29
+#: work/inc/pnvr-settings.php:176
+msgid "Security"
+msgstr ""
+
+#: template-parts/sections/security.php:30
+msgid "It Points a Real Browser at the Web. It Is Built Like It."
+msgstr ""
+
+#: template-parts/sections/security.php:31
+msgid "Accounts, secrets, screenshots, and the network the browser can reach are all locked down by default."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:119
+msgid "Visual Regressor - Trial request"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:120
+msgid "Visual Regressor - Paid plan"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:121
+msgid "Visual Regressor - Source Code purchase"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:122
+msgid "Visual Regressor - Sign in"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:123
+msgid "Visual Regressor - Support"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:245
+msgid "Form Submissions"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:246
+msgid "Submission"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:247
+msgid "Form Items"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:248
+msgid "View Submission"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:249
+msgid "All Submissions"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:269
+msgctxt "post status"
+msgid "Spam"
+msgstr ""
+
+#. translators: %s: the spam count
+#: work/inc/pnvr-contact.php:275
+#, php-format
+msgid "Spam <span class=\"count\">(%s)</span>"
+msgid_plural "Spam <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: work/inc/pnvr-contact.php:332
+msgid "Submission Details"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:363
+#: work/inc/pnvr-contact.php:415
+msgid "Name"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:364
+#: work/inc/pnvr-contact.php:416
+msgid "Email"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:366
+#: work/inc/pnvr-contact.php:417
+msgid "Plan"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:369
+msgid "IP Address"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:370
+msgid "User Agent"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:371
+msgid "Received"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:419
+#: work/inc/pnvr-contact.php:461
+#: work/inc/pnvr-contact.php:549
+msgid "Spam"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:420
+msgid "Read"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:421
+msgid "Date"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:461
+#: work/inc/pnvr-contact.php:548
+msgid "Clean"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:513
+msgid "Not Spam"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:513
+msgid "Mark as Spam"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:547
+msgid "All Statuses"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:578
+msgid "Security check failed"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:583
+msgid "Unauthorized"
+msgstr ""
+
+#: work/inc/pnvr-contact.php:615
+msgid "Thank you! Your message has been sent. We'll be in touch soon."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:619
+msgid "Security check failed. Please refresh and try again."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:638
+msgid "Too many submissions. Please try again later."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:654
+msgid "Please fill in all required fields."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:657
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:693
+msgid "Verification failed. Please try again."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:704
+msgid "Could not save your message. Please try again."
+msgstr ""
+
+#: work/inc/pnvr-contact.php:708
+msgid "Contact Form Submission"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:85
+msgid "Hero Section"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:90
+msgid "Badge text"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:91
+msgid "Title line 1"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:92
+msgid "Title line 2 (gradient)"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:93
+msgid "Description"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:96
+msgid "Primary CTA text"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:97
+msgid "Primary CTA plan (the contact form ?plan= value)"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:98
+msgid "Secondary CTA text"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:99
+msgid "Secondary CTA URL"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:102
+msgid "Slider: baseline image (left)"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:103
+msgid "Slider: candidate image (right)"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:104
+msgid "Slider: baseline label"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:105
+msgid "Slider: candidate label"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:128
+msgid "Contact"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:138
+msgid "Contact page"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:139
+msgid "Every call to action links here, with a ?plan= value to pre-fill the subject."
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:145
+msgid "Support center URL"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:148
+msgid "reCAPTCHA v3 site key"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:149
+msgid "reCAPTCHA v3 secret key"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:172
+msgid "Structured Data"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:182
+msgid "License page"
+msgstr ""
+
+#: work/inc/pnvr-customizer.php:183
+msgid "The Source Code license. The front page schema links to it as the software license."
+msgstr ""
+
+#: work/inc/pnvr-helpers.php:287
+msgid "Close"
+msgstr ""
+
+#: work/inc/pnvr-icons.php:81
+#: work/inc/pnvr-settings.php:354
+#: work/inc/pnvr-settings.php:366
+msgid "None"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:71
+msgid "Marquee Items"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:71
+msgid "Marquee Item"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:71
+msgid "Marquee"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:83
+msgid "Pricing Tiers"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:83
+#: work/inc/pnvr-post-types.php:138
+msgid "Pricing Tier"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:116
+msgid "Feature Card"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:123
+msgid "Icon"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:129
+msgid "Learn more URL"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:130
+msgid "Optional. Adds a learn more link to the card."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:144
+msgid "Tier label"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:145
+msgid "Short label shown above the price, e.g. Hosted."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:150
+msgid "Price"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:151
+msgid "Numbers only, no currency symbol. 0 shows as Free, blank shows as Custom."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:156
+msgid "Price unit"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:162
+msgid "Annual price"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:163
+msgid "Optional. When any tier has one, the section shows a monthly / annual switch."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:168
+msgid "Annual price unit"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:174
+msgid "Badge"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:175
+msgid "Optional, shown on the featured tier, e.g. Most Popular."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:180
+msgid "Featured"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:181
+msgid "Highlight this tier"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:186
+msgid "Features list"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:187
+msgid "One per line. Prefix a line with x: for an item that is not included."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:193
+msgid "Button text"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:199
+msgid "Button plan"
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:200
+msgid "The contact form ?plan= value, e.g. trial, paid, or source."
+msgstr ""
+
+#: work/inc/pnvr-post-types.php:225
+#: work/inc/pnvr-post-types.php:226
+msgid "VR Content"
+msgstr ""
+
+#. translators: %s: the post type's singular name
+#: work/inc/pnvr-post-types.php:321
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#. translators: %s: the post type's singular name
+#: work/inc/pnvr-post-types.php:323
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:91
+msgid "PodNest Visual Regressor Theme Settings"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:92
+msgid "PN-VR Settings"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:105
+msgid "Save Theme Settings"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:106
+msgid "<p class=\"alignright\">Copyright &copy; "
+msgstr ""
+
+#: work/inc/pnvr-settings.php:130
+msgid "SMTP"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:153
+msgid "Cookie Notice"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:184
+msgid "REST API?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:185
+msgid "Should we disable the REST API?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:187
+#: work/inc/pnvr-settings.php:245
+msgid "Get Rid of It!"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:188
+msgid "Only on the Front-End"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:189
+#: work/inc/pnvr-settings.php:247
+msgid "No Way!"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:196
+msgid "Aplication Passwords?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:197
+msgid "Should we disable Application Passwords?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:198
+#: work/inc/pnvr-settings.php:207
+#: work/inc/pnvr-settings.php:216
+#: work/inc/pnvr-settings.php:225
+#: work/inc/pnvr-settings.php:234
+#: work/inc/pnvr-settings.php:299
+#: work/inc/pnvr-settings.php:308
+#: work/inc/pnvr-settings.php:317
+#: work/inc/pnvr-settings.php:429
+#: work/inc/pnvr-settings.php:450
+#: work/inc/pnvr-settings.php:500
+#: work/inc/pnvr-settings.php:509
+#: work/inc/pnvr-settings.php:518
+#: work/inc/pnvr-settings.php:528
+#: work/inc/pnvr-settings.php:537
+#: work/inc/pnvr-settings.php:546
+#: work/inc/pnvr-settings.php:555
+msgid "Yes"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:199
+#: work/inc/pnvr-settings.php:208
+#: work/inc/pnvr-settings.php:217
+#: work/inc/pnvr-settings.php:226
+#: work/inc/pnvr-settings.php:235
+#: work/inc/pnvr-settings.php:300
+#: work/inc/pnvr-settings.php:309
+#: work/inc/pnvr-settings.php:318
+#: work/inc/pnvr-settings.php:430
+#: work/inc/pnvr-settings.php:451
+#: work/inc/pnvr-settings.php:501
+#: work/inc/pnvr-settings.php:510
+#: work/inc/pnvr-settings.php:519
+#: work/inc/pnvr-settings.php:529
+#: work/inc/pnvr-settings.php:538
+#: work/inc/pnvr-settings.php:547
+#: work/inc/pnvr-settings.php:556
+msgid "No"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:205
+msgid "Remove Feeds?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:206
+msgid "Should we remove all RSS Feeds?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:214
+msgid "Remove RPC?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:215
+msgid "Should we remove the XML RPC?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:223
+msgid "Remove Identifiers?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:224
+msgid "Should we remove the WordPress Identifiers?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:232
+msgid "Remove Admin-Bar?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:233
+msgid "Should we remove the admin bar on the front-end?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:242
+msgid "Remove Commenting?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:243
+msgid "Should we remove commenting?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:246
+msgid "Only for the Selected Post Types!"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:255
+#: work/inc/pnvr-settings.php:436
+#: work/inc/pnvr-settings.php:457
+msgid "Post Types"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:256
+msgid "This will remove the commenting capabilities from the selected post types."
+msgstr ""
+
+#: work/inc/pnvr-settings.php:290
+msgid "Imagery"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:297
+msgid "Allow SVGs?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:298
+msgid "Should we allow SVG images to be uploaded to the media library?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:306
+msgid "Allow WEBPs?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:307
+msgid "Should we allow WEBP imagess to be uploaded to the media library?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:315
+msgid "Convert Images?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:316
+msgid "Should we attempt to convert images uploaded to webp format?"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:324
+msgid "Extra Image Sizes"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:325
+msgid "Existing Sizes:<br />"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:326
+msgid "This will add additional image sizes. WordPress will automagically create them on upload.<br /><strong>NOTE: </strong>If you already have images uploaded, you will need to regenerate your thumbnails."
+msgstr ""
+
+#: work/inc/pnvr-settings.php:331
+msgid "Size Name"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:340
+msgid "Image Width"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:341
+#: work/inc/pnvr-settings.php:347
+msgid "in pixels"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:346
+msgid "Image Height"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:352
+msgid "Crop Vertical"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:355
+msgid "Top"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:356
+#: work/inc/pnvr-settings.php:368
+msgid "Center"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:357
+msgid "Bottom"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:364
+msgid "Crop Horizontal"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:367
+msgid "Left"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:369
+msgid "Right"
+msgstr ""
+
+#: work/inc/pnvr-settings.php:409
 msgid "Search Type"
 msgstr ""
 
-#: work/inc/kpf-settings.php:474
+#: work/inc/pnvr-settings.php:412
 msgid "Loose (default)"
 msgstr ""
 
-#: work/inc/kpf-settings.php:475
+#: work/inc/pnvr-settings.php:413
 msgid "Exact"
 msgstr ""
 
-#: work/inc/kpf-settings.php:476
+#: work/inc/pnvr-settings.php:414
 msgid "Sentence"
 msgstr ""
 
-#: work/inc/kpf-settings.php:482
+#: work/inc/pnvr-settings.php:420
 msgid "Revisions"
 msgstr ""
 
-#: work/inc/kpf-settings.php:483
+#: work/inc/pnvr-settings.php:421
 msgid "How many revisions shoud be kept?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:490
+#: work/inc/pnvr-settings.php:428
 msgid "Allow Inline CSS?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:499
+#: work/inc/pnvr-settings.php:437
 msgid "This will add a textarea to the post types you select, that will allow you to input inlined CSS."
 msgstr ""
 
-#: work/inc/kpf-settings.php:511
+#: work/inc/pnvr-settings.php:449
 msgid "Allow Inline Javascript?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:520
+#: work/inc/pnvr-settings.php:458
 msgid "This will add a textarea to the post types you select, that will allow you to input inlined javascript."
 msgstr ""
 
-#: work/inc/kpf-settings.php:553
+#: work/inc/pnvr-settings.php:491
 msgid "Performance"
 msgstr ""
 
-#: work/inc/kpf-settings.php:560
+#: work/inc/pnvr-settings.php:498
 msgid "Remove Querystrings?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:561
+#: work/inc/pnvr-settings.php:499
 msgid "This will attempt to remove querystrings from all static resources."
 msgstr ""
 
-#: work/inc/kpf-settings.php:569
+#: work/inc/pnvr-settings.php:507
 msgid "JS to Footer?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:570
+#: work/inc/pnvr-settings.php:508
 msgid "This will attempt to force all javascript resrouces to load in the site footer."
 msgstr ""
 
-#: work/inc/kpf-settings.php:578
+#: work/inc/pnvr-settings.php:516
 msgid "Defer JS?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:579
+#: work/inc/pnvr-settings.php:517
 msgid "This will attempt to mark all javascript resources as defered."
 msgstr ""
 
-#: work/inc/kpf-settings.php:587
+#: work/inc/pnvr-settings.php:525
 msgid "Apply the Pre's?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:588
+#: work/inc/pnvr-settings.php:526
 msgid "Pre-Load, Pre-Render, and Pre-Fetch"
 msgstr ""
 
-#: work/inc/kpf-settings.php:589
+#: work/inc/pnvr-settings.php:527
 msgid "This will attempt inject pre-load, pre-render, and pre-fetch meta-tags for all external resources."
 msgstr ""
 
-#: work/inc/kpf-settings.php:597
+#: work/inc/pnvr-settings.php:535
 msgid "Apply instant.page?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:598
+#: work/inc/pnvr-settings.php:536
 msgid "This will attempt to inject the instant.page library. See here for more info: <a href=\"https://instant.page/\" target=\"_blank\">https://instant.page/</a>"
 msgstr ""
 
-#: work/inc/kpf-settings.php:606
+#: work/inc/pnvr-settings.php:544
 msgid "Slow Down Heartbeat?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:607
+#: work/inc/pnvr-settings.php:545
 msgid "This will attempt to slow down WordPress's heartbeat. This will change it from the default 15 seconds to 300 seconds."
 msgstr ""
 
-#: work/inc/kpf-settings.php:615
+#: work/inc/pnvr-settings.php:553
 msgid "Remove Emojis?"
 msgstr ""
 
-#: work/inc/kpf-settings.php:616
+#: work/inc/pnvr-settings.php:554
 msgid "This will attempt to remove all WordPress default emoji scripts and stylesheets."
 msgstr ""
 
-#: work/inc/kpf-supports.php:55
+#: work/inc/pnvr-supports.php:75
 msgid "Primary Menu"
 msgstr ""
 
-#: work/inc/kpf-supports.php:56
+#: work/inc/pnvr-supports.php:76
 msgid "Footer Menu"
 msgstr ""
 
-#: work/inc/kpf-supports.php:72
+#: work/inc/pnvr-supports.php:103
 msgid "Primary Sidebar"
 msgstr ""
 
-#: work/inc/kpf-supports.php:74
+#: work/inc/pnvr-supports.php:105
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: work/inc/kpf-supports.php:82
+#: work/inc/pnvr-supports.php:114
 msgid "Footer Widget Area"
 msgstr ""
 
-#: work/inc/kpf-supports.php:84
+#: work/inc/pnvr-supports.php:116
 msgid "Add widgets here to appear in your footer."
 msgstr ""
 
@@ -480,6 +1434,36 @@ msgid "Secondary"
 msgstr ""
 
 #: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Text"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Text Dim"
+msgstr ""
+
+#: theme.json
 msgctxt "Font family name"
-msgid "System"
+msgid "Sora"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Orbitron"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "JetBrains Mono"
 msgstr ""
