@@ -1,0 +1,89 @@
+name: Deploy Tag to Production
+
+on:
+  push:
+    tags:
+      - 'v*'
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout tagged commit
+        uses: actions/checkout@v4
+
+      - name: Load deploy configuration
+        id: config
+        run: |
+          if [ -f ".github/deploy-config.json" ]; then
+            EXCLUDES=$(jq -r '.exclude // [] | .[] | "--exclude " + .' .github/deploy-config.json | tr '\n' ' ')
+            echo "excludes=${EXCLUDES}" >> $GITHUB_OUTPUT
+            echo "config_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "excludes=" >> $GITHUB_OUTPUT
+            echo "config_found=false" >> $GITHUB_OUTPUT
+            echo "::warning::No .github/deploy-config.json found, using defaults"
+          fi
+
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p ./deploy-stage
+          
+          # Default excludes if no config
+          DEFAULT_EXCLUDES=(
+            ".git"
+            ".github"
+            "node_modules"
+            "src"
+            "*.map"
+            "package.json"
+            "package-lock.json"
+            "composer.json"
+            "composer.lock"
+            "tailwind.config.js"
+            "postcss.config.js"
+            "webpack.config.js"
+            "vite.config.js"
+            ".gitignore"
+            ".editorconfig"
+            "README.md"
+            "refresh.sh"
+            "deploy-stage"
+          )
+          
+          # Build rsync exclude arguments
+          EXCLUDE_ARGS=""
+          if [ -f ".github/deploy-config.json" ]; then
+            while IFS= read -r item; do
+              EXCLUDE_ARGS="$EXCLUDE_ARGS --exclude=$item"
+            done < <(jq -r '.exclude[]?' .github/deploy-config.json)
+          else
+            for item in "${DEFAULT_EXCLUDES[@]}"; do
+              EXCLUDE_ARGS="$EXCLUDE_ARGS --exclude=$item"
+            done
+          fi
+          
+          # Copy files to staging directory
+          eval rsync -av $EXCLUDE_ARGS ./ ./deploy-stage/
+
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './deploy-stage/*'
+          remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
+          sftpArgs: '-o ConnectTimeout=30'
+
+      - name: Deployment summary
+        run: |
+          echo "## Deployment Complete :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Tag:** \`${GITHUB_REF_NAME}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** \`${GITHUB_SHA:0:7}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployed to:** \`${{ secrets.SFTP_HOST }}\`" >> $GITHUB_STEP_SUMMARY

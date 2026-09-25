@@ -1,0 +1,68 @@
+{
+    "packages": [
+        {
+            "name": "kevinpirnie/kpt-wpfieldframework",
+            "version": "dev-develop",
+            "version_normalized": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kpirnie/kp-wpfieldframework.git",
+                "reference": "24f38b8b68594138c0e2fee287ed05a52742c062"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kpirnie/kp-wpfieldframework/zipball/24f38b8b68594138c0e2fee287ed05a52742c062",
+                "reference": "24f38b8b68594138c0e2fee287ed05a52742c062",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "time": "2026-07-22T15:35:21+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "KP\\WPFieldFramework\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Pirnie",
+                    "email": "iam@kevinpirnie.com"
+                }
+            ],
+            "description": "A PHP framework for creating WordPress Options Pages, Meta Boxes, and Gutenberg Blocks with repeatable field groups.",
+            "homepage": "https://kevinpirnie.com/",
+            "keywords": [
+                "blocks",
+                "framework",
+                "gutenberg",
+                "meta-box",
+                "options-page",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/kpirnie/kpt-wpfieldframework/issues",
+                "source": "https://github.com/kpirnie/kpt-wpfieldframework"
+            },
+            "funding": [
+                {
+                    "url": "https://ko-fi.com/kevinpirnie",
+                    "type": "ko-fi"
+                },
+                {
+                    "url": "https://www.paypal.biz/kevinpirnie",
+                    "type": "paypal"
+                }
+            ],
+            "install-path": "../kevinpirnie/kpt-wpfieldframework"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

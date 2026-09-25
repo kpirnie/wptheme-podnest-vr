@@ -1,0 +1,286 @@
+/* Alert base */
+.alert {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-pn);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.alert p {
+    margin: 0;
+}
+
+.alert p + p {
+    margin-top: 0.5rem;
+}
+
+/* Alert title */
+.alert-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* Alert icon */
+.alert-icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.125rem;
+}
+
+/* Alert content */
+.alert-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Alert dismissible */
+.alert-dismissible {
+    padding-right: 3rem;
+}
+
+.alert-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.25rem;
+    background: transparent;
+    border: none;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+.alert-close svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Primary */
+.alert-primary {
+    color: var(--color-pn-accent);
+    background-color: var(--color-pn-accent-dim);
+    border-color: var(--color-pn-accent-soft);
+}
+
+.alert-primary .alert-close {
+    color: var(--color-pn-accent);
+}
+
+/* Secondary */
+.alert-secondary {
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card-alt);
+    border-color: var(--color-pn-border);
+}
+
+.alert-secondary .alert-close {
+    color: var(--color-pn-text);
+}
+
+/* Success */
+.alert-success {
+    color: var(--color-pn-success);
+    background-color: var(--color-pn-success-dim);
+    border-color: var(--color-pn-success-soft);
+}
+
+.alert-success .alert-close {
+    color: var(--color-pn-success);
+}
+
+/* Danger / Error */
+.alert-danger,
+.alert-error {
+    color: var(--color-pn-danger);
+    background-color: var(--color-pn-danger-dim);
+    border-color: var(--color-pn-danger-soft);
+}
+
+.alert-danger .alert-close,
+.alert-error .alert-close {
+    color: var(--color-pn-danger);
+}
+
+/* Warning */
+.alert-warning {
+    color: var(--color-pn-warning);
+    background-color: var(--color-pn-warning-dim);
+    border-color: var(--color-pn-warning-soft);
+}
+
+.alert-warning .alert-close {
+    color: var(--color-pn-warning);
+}
+
+/* Info */
+.alert-info {
+    color: var(--color-pn-info);
+    background-color: var(--color-pn-info-dim);
+    border-color: var(--color-pn-info-soft);
+}
+
+.alert-info .alert-close {
+    color: var(--color-pn-info);
+}
+
+/* Light */
+.alert-light {
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card);
+    border-color: var(--color-pn-border);
+}
+
+/* Dark */
+.alert-dark {
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card-alt);
+    border-color: var(--color-pn-border-bright);
+}
+
+.alert-dark .alert-close {
+    color: var(--color-pn-text);
+}
+
+/* Alert with link */
+.alert a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.alert-primary a {
+    color: var(--color-pn-accent);
+}
+
+.alert-success a {
+    color: var(--color-pn-success);
+}
+
+.alert-danger a,
+.alert-error a {
+    color: var(--color-pn-danger);
+}
+
+.alert-warning a {
+    color: var(--color-pn-warning);
+}
+
+.alert-info a {
+    color: var(--color-pn-info);
+}
+
+/* Alert outlined variants */
+.alert-outline-primary {
+    color: var(--color-pn-lime);
+    background-color: transparent;
+    border-color: var(--color-pn-accent);
+}
+
+.alert-outline-success {
+    color: var(--color-pn-success);
+    background-color: transparent;
+    border-color: var(--color-pn-success);
+}
+
+.alert-outline-danger {
+    color: var(--color-pn-danger);
+    background-color: transparent;
+    border-color: var(--color-pn-danger);
+}
+
+.alert-outline-warning {
+    color: var(--color-pn-warning);
+    background-color: transparent;
+    border-color: var(--color-pn-warning);
+}
+
+.alert-outline-info {
+    color: var(--color-pn-info);
+    background-color: transparent;
+    border-color: var(--color-pn-info);
+}
+
+/* Alert with left border accent */
+.alert-accent {
+    border-left-width: 4px;
+    border-radius: 0;
+}
+
+.alert-accent.alert-primary {
+    border-left-color: var(--color-pn-accent);
+}
+
+.alert-accent.alert-success {
+    border-left-color: var(--color-pn-success);
+}
+
+.alert-accent.alert-danger,
+.alert-accent.alert-error {
+    border-left-color: var(--color-pn-danger);
+}
+
+.alert-accent.alert-warning {
+    border-left-color: var(--color-pn-warning);
+}
+
+.alert-accent.alert-info {
+    border-left-color: var(--color-pn-info);
+}
+
+/* Alert list */
+.alert ul,
+.alert ol {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.alert li {
+    margin-bottom: 0.25rem;
+}
+
+/* Alert actions */
+.alert-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.alert-actions a,
+.alert-actions button {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Compact alert */
+.alert-compact {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Full width alert (for top of page notices) */
+.alert-banner {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+/* Alert animation */
+.alert-fade {
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.alert-fade.hiding {
+    opacity: 0;
+}

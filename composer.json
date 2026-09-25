@@ -1,0 +1,33 @@
+{
+    "name": "kevinpirnie/pn-vr",
+    "description": "PodNest Visual Regressor - WordPress marketing theme built on Tailwind CSS",
+    "type": "wordpress-theme",
+    "version": "1.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Pirnie",
+            "email": "iam@kevinpirnie.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "kevinpirnie/kpt-wpfieldframework": "dev-develop"
+    },
+    "autoload": {
+        "classmap": [
+            "work/inc"
+        ],
+        "files": [
+            "work/pnvr-main.php",
+            "work/inc/pnvr-helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true,
+        "sort-packages": true
+    }
+}

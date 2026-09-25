@@ -1,0 +1,416 @@
+/* Image base */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Responsive images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image thumbnail */
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Rounded images */
+.img-rounded {
+    border-radius: var(--radius-pn);
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+/* Image cover */
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-contain {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image position */
+.img-top {
+    object-position: top;
+}
+
+.img-bottom {
+    object-position: bottom;
+}
+
+.img-center {
+    object-position: center;
+}
+
+.img-left {
+    object-position: left;
+}
+
+.img-right {
+    object-position: right;
+}
+
+/* Figure */
+figure {
+    margin: 0 0 1.5rem;
+}
+
+.figure {
+    display: inline-block;
+}
+
+.figure-img {
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.figure-caption {
+    font-size: 0.875rem;
+    color: var(--color-pn-text-dim);
+}
+
+/* Avatar */
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-pn-white);
+    background-color: var(--color-pn-border-bright);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-xs {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.625rem;
+}
+
+.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.75rem;
+}
+
+.avatar-md {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.125rem;
+}
+
+.avatar-lg {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+}
+
+.avatar-xl {
+    width: 6rem;
+    height: 6rem;
+    font-size: 2rem;
+}
+
+/* Avatar colors */
+.avatar-primary {
+    background-color: var(--color-pn-accent);
+}
+
+.avatar-secondary {
+    background-color: var(--color-pn-border-bright);
+}
+
+.avatar-success {
+    background-color: var(--color-pn-success);
+}
+
+.avatar-danger {
+    background-color: var(--color-pn-danger);
+}
+
+.avatar-warning {
+    background-color: var(--color-pn-warning);
+    color: var(--color-pn-on-accent);
+}
+
+.avatar-info {
+    background-color: var(--color-pn-info);
+}
+
+/* Avatar group */
+.avatar-group {
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+.avatar-group .avatar {
+    border: 2px solid var(--color-pn-card);
+    margin-left: -0.75rem;
+}
+
+.avatar-group .avatar:last-child {
+    margin-left: 0;
+}
+
+/* Avatar status */
+.avatar-status {
+    position: relative;
+}
+
+.avatar-status::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    height: 25%;
+    min-width: 8px;
+    min-height: 8px;
+    background-color: var(--color-pn-success);
+    border: 2px solid var(--color-pn-card);
+    border-radius: 50%;
+}
+
+.avatar-status-offline::after {
+    background-color: var(--color-pn-border-bright);
+}
+
+.avatar-status-busy::after {
+    background-color: var(--color-pn-danger);
+}
+
+.avatar-status-away::after {
+    background-color: var(--color-pn-warning);
+}
+
+/* Image placeholder */
+.img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-pn-card-alt);
+    color: var(--color-pn-text-dim);
+}
+
+.img-placeholder svg {
+    width: 25%;
+    height: 25%;
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
+/* Image overlay */
+.img-overlay {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.img-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.img-overlay:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.img-overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.img-overlay:hover .img-overlay-content {
+    opacity: 1;
+}
+
+/* Image zoom */
+.img-zoom {
+    overflow: hidden;
+}
+
+.img-zoom img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Image gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-pn);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Aspect ratio containers */
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-portrait {
+    aspect-ratio: 3 / 4;
+}
+
+.aspect-landscape {
+    aspect-ratio: 4 / 3;
+}
+
+.aspect-wide {
+    aspect-ratio: 21 / 9;
+}
+
+/* Legacy aspect ratio (for older browsers) */
+.ratio {
+    position: relative;
+    width: 100%;
+}
+
+.ratio::before {
+    content: "";
+    display: block;
+    padding-top: var(--ratio-y, 56.25%);
+}
+
+.ratio > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ratio-1x1 {
+    --ratio-y: 100%;
+}
+
+.ratio-4x3 {
+    --ratio-y: 75%;
+}
+
+.ratio-16x9 {
+    --ratio-y: 56.25%;
+}
+
+.ratio-21x9 {
+    --ratio-y: 42.857%;
+}
+
+/* Lazy loading placeholder */
+.img-lazy {
+    background-color: var(--color-pn-card-alt);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img-lazy:not([src]) {
+    opacity: 0;
+}
+
+.img-lazy[src] {
+    opacity: 1;
+}
+
+/* Image caption overlay */
+.img-caption {
+    position: relative;
+    display: block;
+}
+
+.img-caption figcaption,
+.img-caption-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: var(--color-pn-white);
+    font-size: 0.875rem;
+}
+
+/* Lightbox trigger */
+.lightbox-trigger {
+    cursor: zoom-in;
+}
+
+/* SVG styling */
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.svg-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.svg-icon-sm {
+    width: 0.875em;
+    height: 0.875em;
+}
+
+.svg-icon-lg {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+.svg-icon-xl {
+    width: 1.5em;
+    height: 1.5em;
+}

@@ -1,0 +1,26 @@
+{
+    "exclude": [
+        ".git",
+        ".github",
+        "node_modules",
+        "src",
+        "*.map",
+        "package.json",
+        "package-lock.json",
+        "composer.json",
+        "composer.lock",
+        "tailwind.config.js",
+        "postcss.config.js",
+        "webpack.config.js",
+        "vite.config.js",
+        ".gitignore",
+        ".editorconfig",
+        ".env",
+        ".env.*",
+        "README.md",
+        "refresh.sh",
+        "phpcs.xml",
+        "phpstan.neon",
+        "tests"
+    ]
+}

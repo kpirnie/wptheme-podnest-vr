@@ -1,0 +1,505 @@
+/* Responsive embed base */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    display: block;
+    content: "";
+}
+
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Aspect ratios */
+.embed-responsive-21by9::before {
+    padding-top: 42.857143%;
+}
+
+.embed-responsive-16by9::before {
+    padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+    padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+    padding-top: 100%;
+}
+
+.embed-responsive-9by16::before {
+    padding-top: 177.777778%;
+}
+
+/* Modern aspect-ratio approach */
+.ratio {
+    position: relative;
+    width: 100%;
+}
+
+.ratio::before {
+    display: block;
+    padding-top: var(--aspect-ratio);
+    content: "";
+}
+
+.ratio > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ratio-1x1 {
+    --aspect-ratio: 100%;
+}
+
+.ratio-4x3 {
+    --aspect-ratio: 75%;
+}
+
+.ratio-16x9 {
+    --aspect-ratio: 56.25%;
+}
+
+.ratio-21x9 {
+    --aspect-ratio: 42.857143%;
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: var(--radius-pn);
+}
+
+.video-container iframe,
+.video-container video,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Video player styling */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-player {
+    position: relative;
+    background-color: #000;
+    border-radius: var(--radius-pn);
+    overflow: hidden;
+}
+
+.video-player video {
+    display: block;
+    width: 100%;
+}
+
+/* Video overlay (for custom controls/play button) */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.video-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.video-play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.video-play-button:hover {
+    transform: scale(1.1);
+    background-color: var(--color-pn-card);
+}
+
+.video-play-button svg {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.25rem;
+    color: var(--color-pn-text);
+}
+
+/* Audio player */
+audio {
+    width: 100%;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+}
+
+.audio-player-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.audio-player-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-pn-accent);
+    border: none;
+    border-radius: 50%;
+    color: var(--color-pn-on-accent);
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.audio-player-button:hover {
+    background-color: var(--color-pn-accent-dark);
+}
+
+.audio-player-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.audio-player-progress {
+    flex: 1;
+    height: 0.375rem;
+    background-color: var(--color-pn-border);
+    border-radius: 9999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.audio-player-progress-bar {
+    height: 100%;
+    background-color: var(--color-pn-accent);
+    border-radius: 9999px;
+    transition: width 0.1s linear;
+}
+
+.audio-player-time {
+    font-size: 0.875rem;
+    color: var(--color-pn-text-dim);
+    white-space: nowrap;
+}
+
+/* oEmbed / WordPress embed styling */
+.wp-block-embed {
+    margin: 1.5rem 0;
+}
+
+.wp-block-embed__wrapper {
+    position: relative;
+}
+
+.wp-block-embed figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-pn-text-dim);
+    text-align: center;
+}
+
+/* YouTube embed */
+.wp-block-embed-youtube .wp-block-embed__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.wp-block-embed-youtube .wp-block-embed__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Vimeo embed */
+.wp-block-embed-vimeo .wp-block-embed__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.wp-block-embed-vimeo .wp-block-embed__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Twitter/X embed */
+.wp-block-embed-twitter {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Instagram embed */
+.wp-block-embed-instagram {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TikTok embed */
+.wp-block-embed-tiktok {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Spotify embed */
+.wp-block-embed-spotify .wp-block-embed__wrapper {
+    min-height: 152px;
+}
+
+/* SoundCloud embed */
+.wp-block-embed-soundcloud .wp-block-embed__wrapper {
+    min-height: 166px;
+}
+
+/* Facebook embed */
+.wp-block-embed-facebook {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Maps embed */
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-pn);
+    border: 1px solid var(--color-pn-border);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* PDF embed */
+.pdf-embed {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+}
+
+.pdf-embed-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+    text-align: center;
+}
+
+.pdf-embed-fallback-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    color: var(--color-pn-danger);
+}
+
+.pdf-embed-fallback-text {
+    margin-bottom: 1rem;
+    color: var(--color-pn-text-dim);
+}
+
+/* Code embed (CodePen, JSFiddle, etc.) */
+.code-embed {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+    overflow: hidden;
+}
+
+.code-embed iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+}
+
+/* Iframe wrapper */
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-pn);
+    border: 1px solid var(--color-pn-border);
+}
+
+.iframe-wrapper iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+/* Lazy load placeholder */
+.embed-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-pn-card-alt);
+    border-radius: var(--radius-pn);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.embed-placeholder:hover {
+    background-color: var(--color-pn-border);
+}
+
+.embed-placeholder-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    color: var(--color-pn-text-dim);
+}
+
+.embed-placeholder-text {
+    font-size: 0.875rem;
+    color: var(--color-pn-text-dim);
+}
+
+/* Embed loading state */
+.embed-loading {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-pn-card-alt);
+    border-radius: var(--radius-pn);
+}
+
+.embed-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    border: 3px solid var(--color-pn-border);
+    border-top-color: var(--color-pn-accent);
+    border-radius: 50%;
+    animation: embed-spinner 0.75s linear infinite;
+}
+
+@keyframes embed-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Embed error state */
+.embed-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-pn-danger-dim);
+    border: 1px solid var(--color-pn-danger-soft);
+    border-radius: var(--radius-pn);
+    padding: 2rem;
+    text-align: center;
+}
+
+.embed-error-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-pn-danger);
+}
+
+.embed-error-message {
+    color: var(--color-pn-danger);
+    font-size: 0.875rem;
+}
+
+/* Responsive embeds at breakpoints */
+@media (max-width: 767px) {
+    .video-play-button {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .video-play-button svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .pdf-embed {
+        height: 400px;
+    }
+
+    .code-embed,
+    .code-embed iframe {
+        min-height: 300px;
+    }
+}

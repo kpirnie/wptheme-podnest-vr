@@ -1,0 +1,298 @@
+/* -- Site header ---------------------------------------------- */
+.site-header {
+    position: relative;
+    z-index: 1000;
+    min-height: 110px;
+    padding: 14px clamp(16px, 4vw, 75px);
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.site-header.navbar-scrolled {
+    background: color-mix(in oklab, var(--color-pn-bg) 95%, transparent);
+    border-bottom: 1px solid var(--color-pn-border);
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.site-header.navbar-scrolled::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-pn-accent), var(--color-pn-lime), transparent);
+    opacity: 0.5;
+}
+
+/* -- Brand wordmark ------------------------------------------- */
+.site-header .navbar-brand,
+.pnvr-footer-home {
+    margin-right: 2rem;
+    padding: 0;
+    white-space: normal;
+    text-decoration: none;
+}
+
+.site-header .navbar-brand:hover,
+.pnvr-footer-home:hover {
+    text-decoration: none;
+}
+
+.pnvr-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pnvr-brand .pnvr-brand-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 10px var(--color-pn-accent-glow));
+}
+
+.pnvr-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    line-height: 1;
+}
+
+.pnvr-brand-word {
+    font-family: var(--font-brand);
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 0.06em;
+    line-height: 1;
+}
+
+.pnvr-brand-pod {
+    color: var(--color-pn-accent);
+}
+
+.pnvr-brand-nest {
+    color: var(--color-pn-lime);
+}
+
+.pnvr-brand-product {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+}
+
+.pnvr-brand .pnvr-brand-title {
+    margin: 0;
+    font-family: var(--font-brand);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-pn-white);
+}
+
+.pnvr-brand-sub {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-pn-text-dim);
+}
+
+/* -- Primary navigation --------------------------------------- */
+.site-header .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.site-header .navbar-nav {
+    align-items: center;
+    gap: 4px;
+}
+
+.site-header .navbar-nav li {
+    position: relative;
+}
+
+.site-header .navbar-nav .nav-link {
+    display: block;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-pn-text-dim);
+    border-radius: var(--radius-pn);
+    text-decoration: none;
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+.site-header .navbar-nav .nav-link:hover,
+.site-header .navbar-nav .nav-link.active {
+    color: var(--color-pn-text);
+    background: color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+}
+
+/* menu items given the "nav-cta" class render as the primary button */
+.site-header .navbar-nav .nav-cta > .nav-link {
+    background: linear-gradient(135deg, var(--color-pn-accent), var(--color-pn-accent-dark));
+    color: var(--color-pn-on-accent);
+    font-weight: 600;
+    box-shadow: 0 0 20px var(--color-pn-accent-glow);
+}
+
+.site-header .navbar-nav .nav-cta > .nav-link:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 30px var(--color-pn-accent-glow);
+}
+
+/* chevron on parent items */
+.site-header .navbar-nav .menu-item-has-children > .nav-link::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    vertical-align: middle;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    opacity: 0.6;
+    transition: transform 0.25s ease;
+}
+
+.site-header .navbar-nav .menu-item-has-children:hover > .nav-link::after,
+.site-header .navbar-nav .menu-item-has-children:focus-within > .nav-link::after {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* dropdowns */
+.site-header .navbar-nav .sub-menu {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    z-index: 200;
+    min-width: 200px;
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    background: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border-bright);
+    border-radius: var(--radius-pn);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+}
+
+/* invisible bridge over the gap between the parent link and its dropdown */
+.site-header .navbar-nav .sub-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.site-header .navbar-nav .menu-item-has-children:hover > .sub-menu,
+.site-header .navbar-nav .menu-item-has-children:focus-within > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
+}
+
+.site-header .navbar-nav .sub-menu .nav-link {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    border-radius: 0;
+}
+
+/* hamburger */
+.site-header .navbar-toggler {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+}
+
+/* -- Mobile --------------------------------------------------- */
+@media (max-width: 991px) {
+    .site-header {
+        min-height: 80px;
+    }
+
+    .site-header .navbar-collapse.show {
+        padding: 12px 0 20px;
+    }
+
+    .site-header .navbar-nav {
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .site-header .navbar-nav .nav-link {
+        padding: 14px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--color-pn-border);
+        border-radius: 0;
+    }
+
+    .site-header .navbar-nav .nav-link:hover,
+    .site-header .navbar-nav .nav-link.active {
+        background: none;
+    }
+
+    .site-header .navbar-nav .sub-menu {
+        position: static;
+        min-width: 0;
+        padding: 0 0 0 16px;
+        background: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    .site-header .navbar-nav .sub-menu .nav-link {
+        padding: 10px 0;
+    }
+
+    .site-header .navbar-nav .nav-cta > .nav-link {
+        margin-top: 12px;
+        padding: 14px;
+        text-align: center;
+        border-bottom: 0;
+        border-radius: var(--radius-pn);
+    }
+}
+
+@media (max-width: 640px) {
+    .pnvr-brand .pnvr-brand-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .pnvr-brand-word {
+        font-size: 1.5rem;
+    }
+
+    .pnvr-brand .pnvr-brand-title {
+        font-size: 0.78rem;
+    }
+
+    .pnvr-brand-sub {
+        display: none;
+    }
+}

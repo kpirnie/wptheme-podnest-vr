@@ -1,0 +1,397 @@
+/* Base typography */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-pn-bg);
+    background-image: radial-gradient(var(--color-pn-dot) 1px, transparent 1px);
+    background-size: 28px 28px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-pn-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.75em;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-pn-white);
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+}
+
+h2, .h2 {
+    font-size: 2rem;
+}
+
+h3, .h3 {
+    font-size: 1.75rem;
+}
+
+h4, .h4 {
+    font-size: 1.5rem;
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+/* Responsive headings */
+@media (max-width: 768px) {
+    h1, .h1 {
+        font-size: 2rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.75rem;
+    }
+
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+
+    h4, .h4 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lead text */
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/* Links */
+a {
+    color: var(--color-pn-accent);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-pn-lime);
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* Description lists */
+dl {
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 0.75rem;
+}
+
+/* Blockquote */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--color-pn-accent);
+    background-color: var(--color-pn-card);
+    font-style: italic;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote cite,
+blockquote footer {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    font-style: normal;
+    color: var(--color-pn-text-dim);
+}
+
+blockquote cite::before,
+blockquote footer::before {
+    content: "— ";
+}
+
+/* Inline elements */
+strong, b {
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+small, .small {
+    font-size: 0.875rem;
+}
+
+mark, .mark {
+    padding: 0.125rem 0.25rem;
+    background-color: var(--color-pn-warning-dim);
+    border-radius: 0.125rem;
+}
+
+del, s {
+    text-decoration: line-through;
+}
+
+ins, u {
+    text-decoration: underline;
+}
+
+sub {
+    font-size: 0.75rem;
+    vertical-align: sub;
+}
+
+sup {
+    font-size: 0.75rem;
+    vertical-align: super;
+}
+
+/* Abbreviation */
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: none;
+}
+
+/* Address */
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+/* Code */
+code {
+    padding: 0.125rem 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    color: var(--color-pn-danger);
+    background-color: var(--color-pn-card-alt);
+    border-radius: 0.25rem;
+}
+
+pre {
+    display: block;
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card-alt);
+    color: var(--color-pn-text);
+    border-radius: var(--radius-pn);
+    overflow-x: auto;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+/* Keyboard input */
+kbd {
+    padding: 0.125rem 0.375rem;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card-alt);
+    border: 1px solid var(--color-pn-border-bright);
+    border-radius: 0.25rem;
+    box-shadow: inset 0 -1px 0 var(--color-pn-text);
+}
+
+/* Sample output */
+samp {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+}
+
+/* Variable */
+var {
+    font-style: italic;
+}
+
+/* Horizontal rule */
+hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--color-pn-border);
+}
+
+/* Selection */
+::selection {
+    background-color: var(--color-pn-accent);
+    color: var(--color-pn-on-accent);
+}
+
+/* Text utilities */
+.text-muted {
+    color: var(--color-pn-text-dim);
+}
+
+.text-primary {
+    color: var(--color-pn-accent);
+}
+
+.text-secondary {
+    color: var(--color-pn-text-dim);
+}
+
+.text-success {
+    color: var(--color-pn-success);
+}
+
+.text-danger {
+    color: var(--color-pn-danger);
+}
+
+.text-warning {
+    color: var(--color-pn-warning);
+}
+
+.text-info {
+    color: var(--color-pn-info);
+}
+
+/* Alignment */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Transform */
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+/* Weight */
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Style */
+.font-italic {
+    font-style: italic;
+}
+
+/* Wrapping */
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-break {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Line height */
+.lh-1 {
+    line-height: 1;
+}
+
+.lh-sm {
+    line-height: 1.25;
+}
+
+.lh-base {
+    line-height: 1.6;
+}
+
+.lh-lg {
+    line-height: 1.75;
+}

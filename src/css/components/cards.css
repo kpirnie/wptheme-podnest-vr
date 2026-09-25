@@ -1,0 +1,366 @@
+/* Card base */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: var(--color-pn-card);
+    background-clip: border-box;
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+    margin-bottom: 1.5rem;
+}
+
+/* Card header */
+.card-header {
+    padding: 1rem 1.25rem;
+    background-color: var(--color-pn-card);
+    border-bottom: 1px solid var(--color-pn-border);
+}
+
+.card-header:first-child {
+    border-radius: calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px) 0 0;
+}
+
+.card-header-title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* Card body */
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-body > :last-child {
+    margin-bottom: 0;
+}
+
+/* Card footer */
+.card-footer {
+    padding: 1rem 1.25rem;
+    background-color: var(--color-pn-card);
+    border-top: 1px solid var(--color-pn-border);
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px);
+}
+
+/* Card title and text */
+.card-title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    margin-top: -0.375rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-pn-text-dim);
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Card link */
+.card-link {
+    color: var(--color-pn-accent);
+}
+
+.card-link:hover {
+    color: var(--color-pn-lime);
+}
+
+.card-link + .card-link {
+    margin-left: 1rem;
+}
+
+/* Card image */
+.card-img,
+.card-img-top,
+.card-img-bottom {
+    width: 100%;
+    height: auto;
+}
+
+.card-img-top {
+    border-radius: calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px) 0 0;
+}
+
+.card-img-bottom {
+    border-radius: 0 0 calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px);
+}
+
+/* Card image overlay */
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+    border-radius: calc(var(--radius-pn) - 1px);
+}
+
+/* Card list group */
+.card .list-group {
+    border-left: 0;
+    border-right: 0;
+}
+
+.card .list-group:first-child {
+    border-top: 0;
+    border-radius: calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px) 0 0;
+}
+
+.card .list-group:last-child {
+    border-bottom: 0;
+    border-radius: 0 0 calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px);
+}
+
+/* Card horizontal */
+.card-horizontal {
+    flex-direction: row;
+}
+
+.card-horizontal .card-img {
+    width: auto;
+    max-width: 40%;
+    object-fit: cover;
+    border-radius: calc(var(--radius-pn) - 1px) 0 0 calc(var(--radius-pn) - 1px);
+}
+
+.card-horizontal .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .card-horizontal {
+        flex-direction: column;
+    }
+
+    .card-horizontal .card-img {
+        max-width: 100%;
+        border-radius: calc(var(--radius-pn) - 1px) calc(var(--radius-pn) - 1px) 0 0;
+    }
+}
+
+/* Card sizes */
+.card-sm .card-header,
+.card-sm .card-footer {
+    padding: 0.75rem 1rem;
+}
+
+.card-sm .card-body {
+    padding: 1rem;
+}
+
+.card-lg .card-header,
+.card-lg .card-footer {
+    padding: 1.25rem 1.5rem;
+}
+
+.card-lg .card-body {
+    padding: 1.5rem;
+}
+
+/* Card colors */
+.card-primary {
+    background-color: var(--color-pn-accent);
+    border-color: var(--color-pn-accent);
+    color: var(--color-pn-on-accent);
+}
+
+.card-primary .card-header,
+.card-primary .card-footer {
+    background-color: var(--color-pn-accent-dark);
+    border-color: var(--color-pn-accent-dark);
+}
+
+.card-secondary {
+    background-color: var(--color-pn-border-bright);
+    border-color: var(--color-pn-border-bright);
+    color: var(--color-pn-white);
+}
+
+.card-secondary .card-header,
+.card-secondary .card-footer {
+    background-color: var(--color-pn-border);
+    border-color: var(--color-pn-border-bright);
+}
+
+.card-success {
+    background-color: var(--color-pn-success);
+    border-color: var(--color-pn-success);
+    color: var(--color-pn-on-accent);
+}
+
+.card-success .card-header,
+.card-success .card-footer {
+    background-color: var(--color-pn-success-dark);
+    border-color: var(--color-pn-success-dark);
+}
+
+.card-danger {
+    background-color: var(--color-pn-danger);
+    border-color: var(--color-pn-danger);
+    color: var(--color-pn-on-accent);
+}
+
+.card-danger .card-header,
+.card-danger .card-footer {
+    background-color: var(--color-pn-danger-dark);
+    border-color: var(--color-pn-danger-dark);
+}
+
+.card-warning {
+    background-color: var(--color-pn-warning);
+    border-color: var(--color-pn-warning);
+    color: var(--color-pn-on-accent);
+}
+
+.card-warning .card-header,
+.card-warning .card-footer {
+    background-color: var(--color-pn-warning-dark);
+    border-color: var(--color-pn-warning-dark);
+}
+
+.card-info {
+    background-color: var(--color-pn-info);
+    border-color: var(--color-pn-info);
+    color: var(--color-pn-on-accent);
+}
+
+.card-info .card-header,
+.card-info .card-footer {
+    background-color: var(--color-pn-info-dark);
+    border-color: var(--color-pn-info-dark);
+}
+
+.card-dark {
+    background-color: var(--color-pn-card-alt);
+    border-color: var(--color-pn-border-bright);
+    color: var(--color-pn-text);
+}
+
+.card-dark .card-header,
+.card-dark .card-footer {
+    background-color: var(--color-pn-bg);
+    border-color: var(--color-pn-border-bright);
+}
+
+/* Card outline */
+.card-outline-primary {
+    border-color: var(--color-pn-accent);
+}
+
+.card-outline-secondary {
+    border-color: var(--color-pn-border-bright);
+}
+
+.card-outline-success {
+    border-color: var(--color-pn-success);
+}
+
+.card-outline-danger {
+    border-color: var(--color-pn-danger);
+}
+
+.card-outline-warning {
+    border-color: var(--color-pn-warning);
+}
+
+.card-outline-info {
+    border-color: var(--color-pn-info);
+}
+
+/* Card shadow */
+.card-shadow {
+    border: none;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-md {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-lg {
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card hover effect */
+.card-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Clickable card */
+.card-clickable {
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.card-clickable:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.card-clickable:focus-within {
+    outline: 2px solid var(--color-pn-accent);
+    outline-offset: 2px;
+}
+
+/* Card group */
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card-group .card {
+    flex: 1 1 300px;
+    margin-bottom: 0;
+}
+
+/* Card deck (equal height) */
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-deck .card {
+    margin-bottom: 0;
+}
+
+/* Card actions */
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* Card badge */
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}

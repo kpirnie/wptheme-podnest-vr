@@ -1,0 +1,26 @@
+{
+    "name": "pn-vr",
+    "version": "1.0.1",
+    "description": "PodNest Visual Regressor - WordPress marketing theme built on Tailwind CSS",
+    "private": true,
+    "engines": {
+        "node": ">=26.10.0",
+        "npm": ">=12.1.0"
+    },
+    "scripts": {
+        "build": "npm run build:css && npm run build:js",
+        "build:css": "tailwindcss -i src/css/main.css -o assets/css/theme.css --minify",
+        "build:js": "esbuild src/js/main.js --bundle --minify --format=iife --target=es2017 --outfile=assets/js/theme.js",
+        "start": "npm run watch:css & npm run watch:js",
+        "watch:css": "tailwindcss -i src/css/main.css -o assets/css/theme.css --watch",
+        "watch:js": "esbuild src/js/main.js --bundle --format=iife --target=es2017 --outfile=assets/js/theme.js --watch"
+    },
+    "devDependencies": {
+        "@tailwindcss/cli": "^4.3.3",
+        "esbuild": "^0.28.2",
+        "tailwindcss": "^4.3.3"
+    },
+    "allowScripts": {
+        "esbuild@0.28.2": true
+    }
+}

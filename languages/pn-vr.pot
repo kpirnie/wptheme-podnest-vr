@@ -1,0 +1,485 @@
+# Copyright (C) 2026 Kevin Pirnie
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: KP Theme Framework 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wptheme-podnest-vr\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-25T18:28:38+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: kpf\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "KP Theme Framework"
+msgstr ""
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://kevinpirnie.com"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A modern WordPress parent theme framework with CSS framework selection. Supports Bootstrap, UIKit, Tailwind CSS, Foundation, and Bulma."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Kevin Pirnie"
+msgstr ""
+
+#: header.php:20
+msgid "Skip to content"
+msgstr ""
+
+#: index.php:34
+msgid "No content found."
+msgstr ""
+
+#: work/inc/kpf-settings.php:81
+msgid "KP Framework Theme Settings"
+msgstr ""
+
+#: work/inc/kpf-settings.php:82
+msgid "KPF Settings"
+msgstr ""
+
+#: work/inc/kpf-settings.php:96
+msgid "Save Theme Settings"
+msgstr ""
+
+#: work/inc/kpf-settings.php:97
+msgid "<p class=\"alignright\">Copyright &copy; "
+msgstr ""
+
+#: work/inc/kpf-settings.php:121
+msgid "Framework"
+msgstr ""
+
+#: work/inc/kpf-settings.php:128
+msgid "CSS Framework"
+msgstr ""
+
+#: work/inc/kpf-settings.php:129
+msgid "Picking a framework here will automatically load in everything needed for you to utilize it.<br /><strong>NOTE: </strong>Once you make a selection, you will be able to choose the version to utilize, and whether or not you want to load it from the CDN."
+msgstr ""
+
+#: work/inc/kpf-settings.php:131
+#: work/inc/kpf-settings.php:416
+#: work/inc/kpf-settings.php:428
+msgid "None"
+msgstr ""
+
+#: work/inc/kpf-settings.php:132
+msgid "Bootstrap"
+msgstr ""
+
+#: work/inc/kpf-settings.php:133
+msgid "UIKit"
+msgstr ""
+
+#: work/inc/kpf-settings.php:134
+msgid "Tailwind"
+msgstr ""
+
+#: work/inc/kpf-settings.php:135
+msgid "Foundation"
+msgstr ""
+
+#: work/inc/kpf-settings.php:136
+msgid "Bulma"
+msgstr ""
+
+#: work/inc/kpf-settings.php:137
+msgid "Materialize"
+msgstr ""
+
+#: work/inc/kpf-settings.php:145
+msgid "Load from CDN?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:147
+msgid "Should we load the framework from the CDN? (cdn.jsdelivr.net)"
+msgstr ""
+
+#: work/inc/kpf-settings.php:148
+#: work/inc/kpf-settings.php:260
+#: work/inc/kpf-settings.php:269
+#: work/inc/kpf-settings.php:278
+#: work/inc/kpf-settings.php:287
+#: work/inc/kpf-settings.php:296
+#: work/inc/kpf-settings.php:361
+#: work/inc/kpf-settings.php:370
+#: work/inc/kpf-settings.php:379
+#: work/inc/kpf-settings.php:491
+#: work/inc/kpf-settings.php:512
+#: work/inc/kpf-settings.php:562
+#: work/inc/kpf-settings.php:571
+#: work/inc/kpf-settings.php:580
+#: work/inc/kpf-settings.php:590
+#: work/inc/kpf-settings.php:599
+#: work/inc/kpf-settings.php:608
+#: work/inc/kpf-settings.php:617
+msgid "Yes"
+msgstr ""
+
+#: work/inc/kpf-settings.php:149
+#: work/inc/kpf-settings.php:261
+#: work/inc/kpf-settings.php:270
+#: work/inc/kpf-settings.php:279
+#: work/inc/kpf-settings.php:288
+#: work/inc/kpf-settings.php:297
+#: work/inc/kpf-settings.php:362
+#: work/inc/kpf-settings.php:371
+#: work/inc/kpf-settings.php:380
+#: work/inc/kpf-settings.php:492
+#: work/inc/kpf-settings.php:513
+#: work/inc/kpf-settings.php:563
+#: work/inc/kpf-settings.php:572
+#: work/inc/kpf-settings.php:581
+#: work/inc/kpf-settings.php:591
+#: work/inc/kpf-settings.php:600
+#: work/inc/kpf-settings.php:609
+#: work/inc/kpf-settings.php:618
+msgid "No"
+msgstr ""
+
+#: work/inc/kpf-settings.php:161
+msgid "Tailwind plays a bit differently, you will need to utilize it's build processes in order to use this framework.<br />See here for more information: <a href=\"https://tailwindcss.com/docs/installation/using-vite\" target=\"_blank\">https://tailwindcss.com/docs/installation/using-vite</a>"
+msgstr ""
+
+#: work/inc/kpf-settings.php:192
+msgid "SMTP"
+msgstr ""
+
+#: work/inc/kpf-settings.php:215
+msgid "Cookie Notice"
+msgstr ""
+
+#: work/inc/kpf-settings.php:238
+msgid "Security"
+msgstr ""
+
+#: work/inc/kpf-settings.php:246
+msgid "REST API?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:247
+msgid "Should we disable the REST API?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:249
+#: work/inc/kpf-settings.php:307
+msgid "Get Rid of It!"
+msgstr ""
+
+#: work/inc/kpf-settings.php:250
+msgid "Only on the Front-End"
+msgstr ""
+
+#: work/inc/kpf-settings.php:251
+#: work/inc/kpf-settings.php:309
+msgid "No Way!"
+msgstr ""
+
+#: work/inc/kpf-settings.php:258
+msgid "Aplication Passwords?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:259
+msgid "Should we disable Application Passwords?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:267
+msgid "Remove Feeds?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:268
+msgid "Should we remove all RSS Feeds?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:276
+msgid "Remove RPC?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:277
+msgid "Should we remove the XML RPC?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:285
+msgid "Remove Identifiers?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:286
+msgid "Should we remove the WordPress Identifiers?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:294
+msgid "Remove Admin-Bar?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:295
+msgid "Should we remove the admin bar on the front-end?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:304
+msgid "Remove Commenting?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:305
+msgid "Should we remove commenting?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:308
+msgid "Only for the Selected Post Types!"
+msgstr ""
+
+#: work/inc/kpf-settings.php:317
+#: work/inc/kpf-settings.php:498
+#: work/inc/kpf-settings.php:519
+msgid "Post Types"
+msgstr ""
+
+#: work/inc/kpf-settings.php:318
+msgid "This will remove the commenting capabilities from the selected post types."
+msgstr ""
+
+#: work/inc/kpf-settings.php:352
+msgid "Imagery"
+msgstr ""
+
+#: work/inc/kpf-settings.php:359
+msgid "Allow SVGs?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:360
+msgid "Should we allow SVG images to be uploaded to the media library?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:368
+msgid "Allow WEBPs?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:369
+msgid "Should we allow WEBP imagess to be uploaded to the media library?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:377
+msgid "Convert Images?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:378
+msgid "Should we attempt to convert images uploaded to webp format?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:386
+msgid "Extra Image Sizes"
+msgstr ""
+
+#: work/inc/kpf-settings.php:387
+msgid "Existing Sizes:<br />"
+msgstr ""
+
+#: work/inc/kpf-settings.php:388
+msgid "This will add additional image sizes. WordPress will automagically create them on upload.<br /><strong>NOTE: </strong>If you already have images uploaded, you will need to regenerate your thumbnails."
+msgstr ""
+
+#: work/inc/kpf-settings.php:393
+msgid "Size Name"
+msgstr ""
+
+#: work/inc/kpf-settings.php:402
+msgid "Image Width"
+msgstr ""
+
+#: work/inc/kpf-settings.php:403
+#: work/inc/kpf-settings.php:409
+msgid "in pixels"
+msgstr ""
+
+#: work/inc/kpf-settings.php:408
+msgid "Image Height"
+msgstr ""
+
+#: work/inc/kpf-settings.php:414
+msgid "Crop Vertical"
+msgstr ""
+
+#: work/inc/kpf-settings.php:417
+msgid "Top"
+msgstr ""
+
+#: work/inc/kpf-settings.php:418
+#: work/inc/kpf-settings.php:430
+msgid "Center"
+msgstr ""
+
+#: work/inc/kpf-settings.php:419
+msgid "Bottom"
+msgstr ""
+
+#: work/inc/kpf-settings.php:426
+msgid "Crop Horizontal"
+msgstr ""
+
+#: work/inc/kpf-settings.php:429
+msgid "Left"
+msgstr ""
+
+#: work/inc/kpf-settings.php:431
+msgid "Right"
+msgstr ""
+
+#: work/inc/kpf-settings.php:464
+msgid "Content"
+msgstr ""
+
+#: work/inc/kpf-settings.php:471
+msgid "Search Type"
+msgstr ""
+
+#: work/inc/kpf-settings.php:474
+msgid "Loose (default)"
+msgstr ""
+
+#: work/inc/kpf-settings.php:475
+msgid "Exact"
+msgstr ""
+
+#: work/inc/kpf-settings.php:476
+msgid "Sentence"
+msgstr ""
+
+#: work/inc/kpf-settings.php:482
+msgid "Revisions"
+msgstr ""
+
+#: work/inc/kpf-settings.php:483
+msgid "How many revisions shoud be kept?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:490
+msgid "Allow Inline CSS?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:499
+msgid "This will add a textarea to the post types you select, that will allow you to input inlined CSS."
+msgstr ""
+
+#: work/inc/kpf-settings.php:511
+msgid "Allow Inline Javascript?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:520
+msgid "This will add a textarea to the post types you select, that will allow you to input inlined javascript."
+msgstr ""
+
+#: work/inc/kpf-settings.php:553
+msgid "Performance"
+msgstr ""
+
+#: work/inc/kpf-settings.php:560
+msgid "Remove Querystrings?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:561
+msgid "This will attempt to remove querystrings from all static resources."
+msgstr ""
+
+#: work/inc/kpf-settings.php:569
+msgid "JS to Footer?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:570
+msgid "This will attempt to force all javascript resrouces to load in the site footer."
+msgstr ""
+
+#: work/inc/kpf-settings.php:578
+msgid "Defer JS?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:579
+msgid "This will attempt to mark all javascript resources as defered."
+msgstr ""
+
+#: work/inc/kpf-settings.php:587
+msgid "Apply the Pre's?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:588
+msgid "Pre-Load, Pre-Render, and Pre-Fetch"
+msgstr ""
+
+#: work/inc/kpf-settings.php:589
+msgid "This will attempt inject pre-load, pre-render, and pre-fetch meta-tags for all external resources."
+msgstr ""
+
+#: work/inc/kpf-settings.php:597
+msgid "Apply instant.page?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:598
+msgid "This will attempt to inject the instant.page library. See here for more info: <a href=\"https://instant.page/\" target=\"_blank\">https://instant.page/</a>"
+msgstr ""
+
+#: work/inc/kpf-settings.php:606
+msgid "Slow Down Heartbeat?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:607
+msgid "This will attempt to slow down WordPress's heartbeat. This will change it from the default 15 seconds to 300 seconds."
+msgstr ""
+
+#: work/inc/kpf-settings.php:615
+msgid "Remove Emojis?"
+msgstr ""
+
+#: work/inc/kpf-settings.php:616
+msgid "This will attempt to remove all WordPress default emoji scripts and stylesheets."
+msgstr ""
+
+#: work/inc/kpf-supports.php:55
+msgid "Primary Menu"
+msgstr ""
+
+#: work/inc/kpf-supports.php:56
+msgid "Footer Menu"
+msgstr ""
+
+#: work/inc/kpf-supports.php:72
+msgid "Primary Sidebar"
+msgstr ""
+
+#: work/inc/kpf-supports.php:74
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: work/inc/kpf-supports.php:82
+msgid "Footer Widget Area"
+msgstr ""
+
+#: work/inc/kpf-supports.php:84
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System"
+msgstr ""

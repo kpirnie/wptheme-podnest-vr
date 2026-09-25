@@ -1,0 +1,121 @@
+/* Compare Slider */
+.compare-slider {
+    --compare-position: 50%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    touch-action: pan-y;
+    isolation: isolate;
+}
+
+.compare-slider-before,
+.compare-slider-after {
+    position: relative;
+}
+
+.compare-slider-after {
+    position: absolute;
+    inset: 0;
+    clip-path: inset(0 0 0 var(--compare-position));
+}
+
+.compare-slider-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Divider and grip */
+.compare-slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--compare-position);
+    z-index: 2;
+    width: 2px;
+    margin-left: -1px;
+    background: var(--color-pn-accent);
+    box-shadow: 0 0 16px var(--color-pn-accent-glow);
+    pointer-events: none;
+}
+
+.compare-slider-handle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--color-pn-accent);
+    border-radius: 50%;
+    background: var(--color-pn-bg) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232bff88' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='9 6 3 12 9 18'%3e%3c/polyline%3e%3cpolyline points='15 6 21 12 15 18'%3e%3c/polyline%3e%3c/svg%3e") center / 22px no-repeat;
+    box-shadow: 0 0 20px var(--color-pn-accent-glow), 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+}
+
+.compare-slider.is-dragging .compare-slider-handle::after {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* The range input covers the whole slider so a drag anywhere moves the divider */
+.compare-slider .compare-slider-range {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+}
+
+.compare-slider .compare-slider-range::-webkit-slider-thumb {
+    width: 44px;
+    height: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.compare-slider .compare-slider-range::-moz-range-thumb {
+    width: 44px;
+    height: 100%;
+    border: 0;
+}
+
+.compare-slider:has(.compare-slider-range:focus-visible) .compare-slider-handle::after {
+    outline: 2px solid var(--color-pn-lime);
+    outline-offset: 3px;
+}
+
+/* Side labels */
+.compare-slider-label {
+    position: absolute;
+    top: 12px;
+    z-index: 1;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-pn-text);
+    background: color-mix(in oklab, var(--color-pn-bg) 85%, transparent);
+    border: 1px solid var(--color-pn-border-bright);
+    border-radius: 40px;
+    pointer-events: none;
+}
+
+.compare-slider-before .compare-slider-label {
+    left: 12px;
+}
+
+.compare-slider-after .compare-slider-label {
+    right: 12px;
+}

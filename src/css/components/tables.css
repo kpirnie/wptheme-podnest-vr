@@ -1,0 +1,255 @@
+/* Table base */
+table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+caption {
+    padding: 0.75rem 0;
+    font-weight: 600;
+    text-align: left;
+    caption-side: top;
+    color: var(--color-pn-text-dim);
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-pn-border);
+}
+
+th {
+    font-weight: 600;
+    color: var(--color-pn-white);
+    background-color: var(--color-pn-card);
+}
+
+thead th {
+    vertical-align: bottom;
+    border-bottom-width: 2px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Table bordered */
+.table-bordered,
+table.bordered {
+    border: 1px solid var(--color-pn-border);
+}
+
+.table-bordered th,
+.table-bordered td,
+table.bordered th,
+table.bordered td {
+    border: 1px solid var(--color-pn-border);
+}
+
+/* Table striped */
+.table-striped tbody tr:nth-of-type(odd),
+table.striped tbody tr:nth-of-type(odd) {
+    background-color: var(--color-pn-card);
+}
+
+/* Table hover */
+.table-hover tbody tr:hover,
+table.hover tbody tr:hover {
+    background-color: var(--color-pn-card-alt);
+}
+
+/* Table small */
+.table-sm th,
+.table-sm td,
+table.small th,
+table.small td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Table large */
+.table-lg th,
+.table-lg td,
+table.large th,
+table.large td {
+    padding: 1rem 1.25rem;
+}
+
+/* Responsive table */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+    min-width: 600px;
+}
+
+/* Table dark */
+.table-dark,
+table.dark {
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card-alt);
+}
+
+.table-dark th,
+.table-dark td,
+table.dark th,
+table.dark td {
+    border-color: var(--color-pn-border-bright);
+}
+
+.table-dark thead th,
+table.dark thead th {
+    background-color: var(--color-pn-bg);
+    border-color: var(--color-pn-border-bright);
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd),
+table.dark.striped tbody tr:nth-of-type(odd) {
+    background-color: var(--color-pn-card-alt);
+}
+
+.table-dark.table-hover tbody tr:hover,
+table.dark.hover tbody tr:hover {
+    background-color: var(--color-pn-border);
+}
+
+/* Table row colors */
+.table-primary,
+tr.primary {
+    background-color: var(--color-pn-accent-dim);
+}
+
+.table-secondary,
+tr.secondary {
+    background-color: var(--color-pn-card-alt);
+}
+
+.table-success,
+tr.success {
+    background-color: var(--color-pn-success-dim);
+}
+
+.table-danger,
+tr.danger {
+    background-color: var(--color-pn-danger-dim);
+}
+
+.table-warning,
+tr.warning {
+    background-color: var(--color-pn-warning-dim);
+}
+
+.table-info,
+tr.info {
+    background-color: var(--color-pn-info-dim);
+}
+
+/* Table cell alignment */
+.table-middle th,
+.table-middle td,
+table.middle th,
+table.middle td {
+    vertical-align: middle;
+}
+
+.table-bottom th,
+.table-bottom td,
+table.bottom th,
+table.bottom td {
+    vertical-align: bottom;
+}
+
+/* Fixed layout */
+.table-fixed,
+table.fixed {
+    table-layout: fixed;
+}
+
+/* Borderless */
+.table-borderless th,
+.table-borderless td,
+table.borderless th,
+table.borderless td {
+    border: none;
+}
+
+/* Column widths */
+.col-auto {
+    width: auto;
+}
+
+.col-1 {
+    width: 8.333333%;
+}
+
+.col-2 {
+    width: 16.666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333333%;
+}
+
+.col-5 {
+    width: 41.666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+/* Sortable columns */
+th[data-sortable] {
+    cursor: pointer;
+    user-select: none;
+}
+
+th[data-sortable]::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid var(--color-pn-border-bright);
+}
+
+th[data-sortable]:hover {
+    background-color: var(--color-pn-card-alt);
+}
+
+th[data-sort="asc"]::after {
+    border-top: none;
+    border-bottom: 4px solid var(--color-pn-accent);
+}
+
+th[data-sort="desc"]::after {
+    border-top: 4px solid var(--color-pn-accent);
+}
+
+/* Empty state */
+.table-empty {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--color-pn-text-dim);
+}
+
+.table-empty td {
+    border-bottom: none;
+}

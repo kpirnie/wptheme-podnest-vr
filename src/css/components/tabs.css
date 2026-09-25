@@ -1,0 +1,442 @@
+/* Tabs base */
+.tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tab list */
+.tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid var(--color-pn-border);
+}
+
+.tab-item {
+    margin-bottom: -1px;
+}
+
+/* Tab button/link */
+.tab-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-pn-text-dim);
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-top-left-radius: var(--radius-pn);
+    border-top-right-radius: var(--radius-pn);
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.tab-link:hover {
+    color: var(--color-pn-text);
+    border-color: var(--color-pn-border) var(--color-pn-border) transparent;
+}
+
+.tab-link:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-pn-accent) 25%, transparent);
+}
+
+.tab-link.active {
+    color: var(--color-pn-accent);
+    background-color: var(--color-pn-card);
+    border-color: var(--color-pn-border) var(--color-pn-border) var(--color-pn-card);
+}
+
+.tab-link.disabled {
+    color: var(--color-pn-text-dim);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Tab icon */
+.tab-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+/* Tab badge */
+.tab-link .badge {
+    margin-left: 0.375rem;
+}
+
+/* Tab content */
+.tab-content {
+    padding: 1.5rem 0;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Tab fade animation */
+.tab-pane.fade {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.tab-pane.fade.active {
+    opacity: 1;
+}
+
+/* Pills tabs */
+.tab-list-pills {
+    border-bottom: 0;
+    gap: 0.5rem;
+}
+
+.tab-list-pills .tab-link {
+    border-radius: var(--radius-pn);
+    border: none;
+}
+
+.tab-list-pills .tab-link:hover {
+    background-color: var(--color-pn-card-alt);
+}
+
+.tab-list-pills .tab-link.active {
+    color: var(--color-pn-on-accent);
+    background-color: var(--color-pn-accent);
+}
+
+/* Underline tabs */
+.tab-list-underline {
+    border-bottom: 2px solid var(--color-pn-border);
+    gap: 1.5rem;
+}
+
+.tab-list-underline .tab-link {
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-list-underline .tab-link:hover {
+    border-bottom-color: var(--color-pn-border-bright);
+}
+
+.tab-list-underline .tab-link.active {
+    color: var(--color-pn-accent);
+    border-bottom-color: var(--color-pn-accent);
+    background-color: transparent;
+}
+
+/* Bordered tabs (boxed) */
+.tab-list-bordered {
+    background-color: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn) var(--radius-pn) 0 0;
+    border-bottom: none;
+    padding: 0.5rem 0.5rem 0;
+}
+
+.tab-list-bordered .tab-link {
+    border-radius: var(--radius-pn) var(--radius-pn) 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+}
+
+.tab-list-bordered .tab-link.active {
+    background-color: var(--color-pn-card);
+    border-color: var(--color-pn-border);
+    margin-bottom: -1px;
+    padding-bottom: calc(0.75rem + 1px);
+}
+
+.tabs-bordered .tab-content {
+    border: 1px solid var(--color-pn-border);
+    border-top: none;
+    border-radius: 0 0 var(--radius-pn) var(--radius-pn);
+    padding: 1.5rem;
+    background-color: var(--color-pn-card);
+}
+
+/* Vertical tabs */
+.tabs-vertical {
+    flex-direction: row;
+}
+
+.tabs-vertical .tab-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-bottom: none;
+    border-right: 1px solid var(--color-pn-border);
+    min-width: 200px;
+}
+
+.tabs-vertical .tab-item {
+    margin-bottom: 0;
+    margin-right: -1px;
+}
+
+.tabs-vertical .tab-link {
+    width: 100%;
+    border-radius: var(--radius-pn) 0 0 var(--radius-pn);
+    border-bottom: 1px solid transparent;
+    justify-content: flex-start;
+}
+
+.tabs-vertical .tab-link:hover {
+    border-color: transparent transparent transparent var(--color-pn-border);
+}
+
+.tabs-vertical .tab-link.active {
+    border-color: var(--color-pn-border) transparent var(--color-pn-border) var(--color-pn-border);
+    border-right-color: var(--color-pn-card);
+}
+
+.tabs-vertical .tab-content {
+    flex: 1;
+    padding: 0 0 0 1.5rem;
+}
+
+/* Centered tabs */
+.tab-list-center {
+    justify-content: center;
+}
+
+/* Right aligned tabs */
+.tab-list-end {
+    justify-content: flex-end;
+}
+
+/* Fill/justified tabs */
+.tab-list-fill .tab-item {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.tab-list-fill .tab-link {
+    width: 100%;
+    justify-content: center;
+}
+
+.tab-list-justified .tab-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tab-list-justified .tab-link {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Tab sizes */
+.tab-list-sm .tab-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.tab-list-lg .tab-link {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Tab colors */
+.tab-list-primary .tab-link.active {
+    color: var(--color-pn-accent);
+    border-bottom-color: var(--color-pn-accent);
+}
+
+.tab-list-success .tab-link.active {
+    color: var(--color-pn-success);
+    border-bottom-color: var(--color-pn-success);
+}
+
+.tab-list-danger .tab-link.active {
+    color: var(--color-pn-danger);
+    border-bottom-color: var(--color-pn-danger);
+}
+
+.tab-list-pills.tab-list-primary .tab-link.active {
+    background-color: var(--color-pn-accent);
+    color: var(--color-pn-on-accent);
+}
+
+.tab-list-pills.tab-list-success .tab-link.active {
+    background-color: var(--color-pn-success);
+    color: var(--color-pn-on-accent);
+}
+
+.tab-list-pills.tab-list-danger .tab-link.active {
+    background-color: var(--color-pn-danger);
+    color: var(--color-pn-on-accent);
+}
+
+/* Scrollable tabs */
+.tab-list-scrollable {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.tab-list-scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-list-scrollable .tab-item {
+    flex-shrink: 0;
+}
+
+/* Tab with close button */
+.tab-closable {
+    padding-right: 0.5rem;
+}
+
+.tab-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.375rem;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1;
+    color: currentColor;
+    background: transparent;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.tab-close:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tab-close::before {
+    content: "×";
+}
+
+/* Segmented control (button group tabs) */
+.segmented-control {
+    display: inline-flex;
+    background-color: var(--color-pn-card-alt);
+    border-radius: var(--radius-pn);
+    padding: 0.25rem;
+}
+
+.segmented-control-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-pn-text-dim);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-pn);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.segmented-control-item:hover {
+    color: var(--color-pn-text);
+}
+
+.segmented-control-item.active {
+    color: var(--color-pn-text);
+    background-color: var(--color-pn-card);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.segmented-control-item:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-pn-accent) 25%, transparent);
+}
+
+/* Toggle tabs (switch style) */
+.toggle-tabs {
+    display: inline-flex;
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn);
+    overflow: hidden;
+}
+
+.toggle-tab {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-pn-text-dim);
+    background-color: var(--color-pn-card);
+    border: none;
+    border-right: 1px solid var(--color-pn-border);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.toggle-tab:last-child {
+    border-right: none;
+}
+
+.toggle-tab:hover {
+    background-color: var(--color-pn-card);
+}
+
+.toggle-tab.active {
+    color: var(--color-pn-on-accent);
+    background-color: var(--color-pn-accent);
+}
+
+.toggle-tab:focus {
+    outline: 0;
+    z-index: 1;
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-pn-accent) 25%, transparent);
+}
+
+/* Responsive tabs to accordion */
+@media (max-width: 767px) {
+    .tabs-responsive .tab-list {
+        display: none;
+    }
+
+    .tabs-responsive .tab-content {
+        padding: 0;
+    }
+
+    .tabs-responsive .tab-pane {
+        display: block;
+        border: 1px solid var(--color-pn-border);
+        border-radius: var(--radius-pn);
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+    }
+
+    .tabs-responsive .tab-pane-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        font-weight: 500;
+        background-color: var(--color-pn-card);
+        cursor: pointer;
+    }
+
+    .tabs-responsive .tab-pane-body {
+        display: none;
+        padding: 1rem;
+    }
+
+    .tabs-responsive .tab-pane.active .tab-pane-body {
+        display: block;
+    }
+}

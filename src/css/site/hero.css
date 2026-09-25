@@ -1,0 +1,265 @@
+/* -- Hero ----------------------------------------------------- */
+.pnvr-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+    padding: 40px 0 70px;
+    overflow: hidden;
+}
+
+.pnvr-hero .container {
+    padding-left: clamp(16px, 4vw, 75px);
+    padding-right: clamp(16px, 4vw, 75px);
+}
+
+.pnvr-hero-glow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    z-index: 0;
+    width: 900px;
+    height: 600px;
+    background: radial-gradient(ellipse, color-mix(in oklab, var(--color-pn-accent) 12%, transparent) 0%, color-mix(in oklab, var(--color-pn-lime) 4%, transparent) 40%, transparent 70%);
+    pointer-events: none;
+    transform: translateX(-50%);
+    animation: pnvr-glow-breathe 6s ease-in-out infinite;
+}
+
+@keyframes pnvr-glow-breathe {
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(1.05);
+    }
+}
+
+.pnvr-hero-grid-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+        linear-gradient(color-mix(in oklab, var(--color-pn-accent) 4%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in oklab, var(--color-pn-accent) 4%, transparent) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+    pointer-events: none;
+}
+
+.pnvr-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 60px;
+    align-items: center;
+}
+
+.pnvr-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    padding: 7px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-pn-lime);
+    background: var(--color-pn-lime-dim);
+    border: 1px solid color-mix(in oklab, var(--color-pn-lime) 20%, transparent);
+    border-radius: 40px;
+    animation: pnvr-fade-in-up 0.6s ease both;
+}
+
+.pnvr-hero-badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--color-pn-lime);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--color-pn-lime);
+    animation: pnvr-pulse 2s infinite;
+}
+
+.pnvr-hero .pnvr-hero-title {
+    margin-bottom: 24px;
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-pn-white);
+    animation: pnvr-fade-in-up 0.7s ease 0.1s both;
+}
+
+.pnvr-hero-desc {
+    max-width: 540px;
+    margin-bottom: 40px;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.8;
+    color: var(--color-pn-text-dim);
+    animation: pnvr-fade-in-up 0.7s ease 0.2s both;
+}
+
+.pnvr-hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    animation: pnvr-fade-in-up 0.7s ease 0.3s both;
+}
+
+.pnvr-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 40px;
+    margin: 52px 0 0;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-pn-border);
+    animation: pnvr-fade-in-up 0.7s ease 0.4s both;
+}
+
+.pnvr-stat {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.pnvr-stat-value {
+    margin: 0;
+    font-family: var(--font-brand);
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--color-pn-white);
+}
+
+.pnvr-stat-label {
+    margin-top: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-pn-text-dim);
+}
+
+/* -- Comparison frame ----------------------------------------- */
+.pnvr-hero-visual {
+    position: relative;
+    animation: pnvr-fade-in-right 0.8s ease 0.3s both;
+}
+
+.pnvr-compare-frame {
+    margin: 0;
+    overflow: hidden;
+    background: #020a1a;
+    border: 1px solid var(--color-pn-border-bright);
+    border-radius: var(--radius-pn-lg);
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-pn-accent) 10%, transparent), 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 60px color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+}
+
+.pnvr-compare-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: #0a1628;
+    border-bottom: 1px solid var(--color-pn-border);
+}
+
+.pnvr-compare-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f57;
+}
+
+.pnvr-compare-dot:nth-child(2) {
+    background: #febc2e;
+}
+
+.pnvr-compare-dot:nth-child(3) {
+    background: #28c840;
+}
+
+.pnvr-compare-title {
+    flex: 1;
+    margin-right: 52px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-align: center;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-compare-frame .compare-slider {
+    aspect-ratio: 800 / 520;
+}
+
+.pnvr-compare-frame .compare-slider-before {
+    height: 100%;
+}
+
+.pnvr-compare-result {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 20px;
+    padding: 12px 18px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-pn-text-dim);
+    background: #0a1628;
+    border-top: 1px solid var(--color-pn-border);
+}
+
+.pnvr-compare-metric strong {
+    margin-left: 6px;
+    color: var(--color-pn-white);
+}
+
+.pnvr-compare-metric .pnvr-verdict {
+    color: var(--color-pn-warning);
+}
+
+/* -- Responsive ----------------------------------------------- */
+@media (max-width: 960px) {
+    .pnvr-hero {
+        min-height: 0;
+    }
+
+    .pnvr-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .pnvr-hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pnvr-hero-ctas,
+    .pnvr-hero-stats {
+        justify-content: center;
+    }
+
+    .pnvr-hero-visual {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .pnvr-hero-ctas .pnvr-btn-primary,
+    .pnvr-hero-ctas .pnvr-btn-secondary {
+        width: 100%;
+    }
+}

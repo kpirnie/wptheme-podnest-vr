@@ -1,0 +1,95 @@
+/**
+ * Design tokens
+ *
+ * The PodNest dark navy base, fonts, and radii, with the accent
+ * shifted to neon green for Visual Regressor
+ */
+
+/* -- Fonts --------------------------------------------------- */
+@font-face {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url(../fonts/orbitron-latin-wght-normal.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Sora";
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url(../fonts/sora-latin-wght-normal.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url(../fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");
+}
+
+/* -- Theme ---------------------------------------------------- */
+@theme static {
+    /* type */
+    --font-sans: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --font-brand: "Orbitron", "Segoe UI", sans-serif;
+    --font-body: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    /* surfaces */
+    --color-pn-bg: #070e20;
+    --color-pn-card: #0c1530;
+    --color-pn-card-alt: #0f1d3d;
+    --color-pn-input: #101c3a;
+    --color-pn-navy: #0f1d3d;
+
+    /* text */
+    --color-pn-text: #dde8f5;
+    --color-pn-text-dim: #6b8cae;
+    --color-pn-white: #ffffff;
+    --color-pn-on-accent: #070e20;
+
+    /* lines */
+    --color-pn-border: #1a2a4a;
+    --color-pn-border-bright: #2a3f6a;
+
+    /* accent: neon green */
+    --color-pn-accent: #2bff88;
+    --color-pn-accent-dark: #1fd46e;
+    --color-pn-accent-soft: color-mix(in oklab, var(--color-pn-accent) 35%, transparent);
+    --color-pn-accent-dim: color-mix(in oklab, var(--color-pn-accent) 12%, transparent);
+    --color-pn-accent-glow: color-mix(in oklab, var(--color-pn-accent) 30%, transparent);
+
+    /* secondary highlight: lime */
+    --color-pn-lime: #c6ff3d;
+    --color-pn-lime-dim: color-mix(in oklab, var(--color-pn-lime) 12%, transparent);
+    --color-pn-lime-glow: color-mix(in oklab, var(--color-pn-lime) 25%, transparent);
+
+    /* status */
+    --color-pn-success: #00e5a0;
+    --color-pn-success-dark: color-mix(in oklab, var(--color-pn-success) 80%, black);
+    --color-pn-success-soft: color-mix(in oklab, var(--color-pn-success) 35%, transparent);
+    --color-pn-success-dim: color-mix(in oklab, var(--color-pn-success) 12%, transparent);
+    --color-pn-warning: #ffb020;
+    --color-pn-warning-dark: color-mix(in oklab, var(--color-pn-warning) 80%, black);
+    --color-pn-warning-soft: color-mix(in oklab, var(--color-pn-warning) 35%, transparent);
+    --color-pn-warning-dim: color-mix(in oklab, var(--color-pn-warning) 12%, transparent);
+    --color-pn-danger: #ff4560;
+    --color-pn-danger-dark: color-mix(in oklab, var(--color-pn-danger) 80%, black);
+    --color-pn-danger-soft: color-mix(in oklab, var(--color-pn-danger) 35%, transparent);
+    --color-pn-danger-dim: color-mix(in oklab, var(--color-pn-danger) 12%, transparent);
+    --color-pn-info: #00d4ff;
+    --color-pn-info-dark: color-mix(in oklab, var(--color-pn-info) 80%, black);
+    --color-pn-info-soft: color-mix(in oklab, var(--color-pn-info) 35%, transparent);
+    --color-pn-info-dim: color-mix(in oklab, var(--color-pn-info) 12%, transparent);
+
+    /* background dot grid */
+    --color-pn-dot: color-mix(in oklab, var(--color-pn-accent) 7%, transparent);
+
+    /* radii */
+    --radius-pn: 10px;
+    --radius-pn-lg: 16px;
+    --radius-pn-xl: 24px;
+}

@@ -1,0 +1,229 @@
+/* -- AI judge spotlight --------------------------------------- */
+.pnvr-ai-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.pnvr-ai-content h2 {
+    margin-bottom: 16px;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    letter-spacing: -0.02em;
+}
+
+.pnvr-ai-content .pnvr-lead {
+    margin-bottom: 32px;
+}
+
+.pnvr-ai-points {
+    display: grid;
+    gap: 18px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+}
+
+.pnvr-ai-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-ai-points strong {
+    display: block;
+    color: var(--color-pn-white);
+}
+
+.pnvr-ai-points .pnvr-ai-point-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+.pnvr-ai-points .pnvr-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.pnvr-verdict-legend {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-pn-border);
+}
+
+.pnvr-verdict-legend dt {
+    margin-bottom: 8px;
+}
+
+.pnvr-verdict-legend dd {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--color-pn-text-dim);
+}
+
+/* -- Review panel illustration -------------------------------- */
+.pnvr-review {
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border-bright);
+    border-radius: var(--radius-pn-lg);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 60px color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+}
+
+.pnvr-review-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-pn-text-dim);
+    background: #0a1628;
+    border-bottom: 1px solid var(--color-pn-border);
+}
+
+.pnvr-review-run {
+    color: var(--color-pn-white);
+}
+
+.pnvr-review-model {
+    margin-left: auto;
+    padding: 2px 8px;
+    color: var(--color-pn-accent);
+    background: var(--color-pn-accent-dim);
+    border-radius: 4px;
+}
+
+.pnvr-review-diff svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 800 / 400;
+}
+
+.pnvr-review-body {
+    padding: 22px 24px 24px;
+}
+
+.pnvr-review-verdict {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.pnvr-review-verdict .pnvr-verdict {
+    font-size: 0.85rem;
+    padding: 4px 14px;
+}
+
+.pnvr-review-confidence {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-review-meter {
+    position: relative;
+    flex: 1;
+    height: 6px;
+    overflow: hidden;
+    background: var(--color-pn-border);
+    border-radius: 3px;
+}
+
+.pnvr-review-meter span {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: linear-gradient(90deg, var(--color-pn-warning), color-mix(in oklab, var(--color-pn-warning) 60%, var(--color-pn-lime)));
+    border-radius: 3px;
+}
+
+.pnvr-review-confidence-value {
+    color: var(--color-pn-white);
+}
+
+.pnvr-review-summary {
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-pn-text);
+    background: var(--color-pn-bg);
+    border-left: 3px solid var(--color-pn-warning);
+    border-radius: 0 var(--radius-pn) var(--radius-pn) 0;
+}
+
+.pnvr-review-findings {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: pnvr-finding;
+}
+
+.pnvr-review-findings li {
+    position: relative;
+    padding-left: 34px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--color-pn-text-dim);
+    counter-increment: pnvr-finding;
+}
+
+/* numbered to match the pins on the diff */
+.pnvr-review-findings li::before {
+    content: counter(pnvr-finding);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-pn-on-accent);
+    background: var(--color-pn-accent);
+    border-radius: 50%;
+}
+
+.pnvr-review-cat {
+    margin-right: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-pn-lime);
+}
+
+@media (max-width: 960px) {
+    .pnvr-ai-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 640px) {
+    .pnvr-verdict-legend {
+        grid-template-columns: 1fr;
+    }
+}

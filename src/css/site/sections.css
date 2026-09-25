@@ -1,0 +1,407 @@
+/* -- Sections ------------------------------------------------- */
+.pnvr-section {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+}
+
+.pnvr-section .container {
+    padding-left: clamp(16px, 4vw, 75px);
+    padding-right: clamp(16px, 4vw, 75px);
+}
+
+.pnvr-section-alt {
+    background: linear-gradient(180deg, transparent 0%, color-mix(in oklab, var(--color-pn-card) 70%, transparent) 15%, color-mix(in oklab, var(--color-pn-card) 70%, transparent) 85%, transparent 100%);
+}
+
+.pnvr-section-header {
+    max-width: 760px;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.pnvr-section-header h2 {
+    margin-bottom: 16px;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    letter-spacing: -0.02em;
+}
+
+.pnvr-section-desc,
+.pnvr-lead {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    line-height: 1.75;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-pn-accent);
+    background: var(--color-pn-accent-dim);
+    border: 1px solid color-mix(in oklab, var(--color-pn-accent) 20%, transparent);
+    border-radius: 40px;
+}
+
+.pnvr-eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--color-pn-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--color-pn-accent);
+    animation: pnvr-pulse 2s infinite;
+}
+
+.pnvr-empty-notice {
+    padding: 20px 0;
+    font-style: italic;
+    text-align: center;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-pn-lime);
+}
+
+.pnvr-link-arrow:hover {
+    text-decoration: none;
+}
+
+.pnvr-link-arrow span {
+    transition: transform 0.25s ease;
+}
+
+.pnvr-link-arrow:hover span {
+    transform: translateX(4px);
+}
+
+/* scroll reveal, only hidden when scripts can reveal it again */
+@media (scripting: enabled) {
+    [data-scroll-reveal] {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    [data-scroll-reveal].revealed {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* -- Marquee -------------------------------------------------- */
+.pnvr-marquee {
+    position: relative;
+    z-index: 1;
+    padding: 16px 0;
+    overflow: hidden;
+    background: var(--color-pn-card);
+    border-top: 1px solid var(--color-pn-border);
+    border-bottom: 1px solid var(--color-pn-border);
+}
+
+.pnvr-marquee::before,
+.pnvr-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 120px;
+}
+
+.pnvr-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-pn-card), transparent);
+}
+
+.pnvr-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-pn-card), transparent);
+}
+
+.pnvr-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: pnvr-marquee 40s linear infinite;
+}
+
+@keyframes pnvr-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.pnvr-marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 32px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-pn-text-dim);
+    border-right: 1px solid var(--color-pn-border);
+}
+
+.pnvr-marquee-dot {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    background: var(--color-pn-accent);
+    border-radius: 50%;
+}
+
+/* -- Card base, shared by features and security --------------- */
+.pnvr-feature-card,
+.pnvr-security-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    background: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn-lg);
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, opacity 0.6s ease;
+}
+
+.pnvr-feature-card::after,
+.pnvr-security-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, color-mix(in oklab, var(--color-pn-accent) 4%, transparent) 0%, transparent 60%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.pnvr-feature-card:hover,
+.pnvr-security-card:hover {
+    border-color: color-mix(in oklab, var(--color-pn-accent) 30%, transparent);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+}
+
+.pnvr-feature-card:hover::after,
+.pnvr-security-card:hover::after {
+    opacity: 1;
+}
+
+.pnvr-feature-card h3,
+.pnvr-security-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.pnvr-feature-card p,
+.pnvr-security-card p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-feature-icon,
+.pnvr-security-icon,
+.pnvr-pipeline-icon,
+.pnvr-ai-point-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    color: var(--color-pn-accent);
+    background: var(--color-pn-accent-dim);
+    border: 1px solid color-mix(in oklab, var(--color-pn-accent) 20%, transparent);
+    border-radius: var(--radius-pn);
+}
+
+.pnvr-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* -- Features ------------------------------------------------- */
+.pnvr-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* -- How it works --------------------------------------------- */
+.pnvr-pipeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: none;
+}
+
+/* the line joining the steps */
+.pnvr-pipeline::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 52px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-pn-accent), var(--color-pn-lime), var(--color-pn-accent));
+    opacity: 0.35;
+}
+
+.pnvr-pipeline-step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    background: var(--color-pn-card);
+    border: 1px solid var(--color-pn-border);
+    border-radius: var(--radius-pn-lg);
+}
+
+.pnvr-pipeline-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.pnvr-pipeline-head .pnvr-pipeline-icon {
+    margin-bottom: 0;
+    background: var(--color-pn-bg);
+    box-shadow: 0 0 20px var(--color-pn-accent-glow);
+}
+
+.pnvr-pipeline-num {
+    font-family: var(--font-brand);
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: color-mix(in oklab, var(--color-pn-accent) 35%, transparent);
+}
+
+.pnvr-pipeline-step h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.pnvr-pipeline-step p {
+    flex: 1;
+    margin-bottom: 18px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--color-pn-text-dim);
+}
+
+.pnvr-pipeline-output {
+    align-self: flex-start;
+    padding: 6px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-pn-lime);
+    background: var(--color-pn-bg);
+    border: 1px solid var(--color-pn-border);
+    border-radius: 6px;
+}
+
+/* -- Security ------------------------------------------------- */
+.pnvr-security-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* -- Call to action ------------------------------------------- */
+.pnvr-cta-inner {
+    position: relative;
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 64px);
+    text-align: center;
+    background: radial-gradient(ellipse at top, color-mix(in oklab, var(--color-pn-accent) 14%, transparent) 0%, transparent 60%), var(--color-pn-card);
+    border: 1px solid color-mix(in oklab, var(--color-pn-accent) 25%, transparent);
+    border-radius: var(--radius-pn-xl);
+    box-shadow: 0 0 60px color-mix(in oklab, var(--color-pn-accent) 8%, transparent);
+}
+
+.pnvr-cta-inner h2 {
+    margin-bottom: 16px;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    letter-spacing: -0.02em;
+}
+
+.pnvr-cta-inner .pnvr-lead {
+    max-width: 620px;
+    margin: 0 auto 36px;
+}
+
+.pnvr-cta-inner .pnvr-hero-ctas {
+    justify-content: center;
+    animation: none;
+}
+
+/* -- Responsive ----------------------------------------------- */
+@media (max-width: 1100px) {
+    .pnvr-pipeline,
+    .pnvr-security-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pnvr-pipeline::before {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .pnvr-section {
+        padding: 70px 0;
+    }
+
+    .pnvr-features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .pnvr-section {
+        padding: 50px 0;
+    }
+
+    .pnvr-section-header {
+        margin-bottom: 40px;
+    }
+
+    .pnvr-features-grid,
+    .pnvr-pipeline,
+    .pnvr-security-grid {
+        grid-template-columns: 1fr;
+    }
+}
