@@ -23,20 +23,20 @@ foreach ($pnvr_tiers as $pnvr_tier) {
     }
 }
 
-// the Trial vs Paid rows: feature, trial, paid. true/false render as a check or a cross
+// the Trial vs Paid rows: feature, trial, starter, pro. true/false render as a check or a cross
 $pnvr_rows = [
-    [__('Projects', 'pn-vr'), '1', __('Unlimited', 'pn-vr')],
-    [__('Comparisons', 'pn-vr'), '1', __('Unlimited', 'pn-vr')],
-    [__('Runs per day', 'pn-vr'), '5', __('Unlimited', 'pn-vr')],
-    [__('Pixel diff & expected content checks', 'pn-vr'), true, true],
-    [__('Per-URL HTTP basic auth', 'pn-vr'), true, true],
-    [__('Manual pass with note', 'pn-vr'), true, true],
-    [__('AI verdicts', 'pn-vr'), false, true],
-    [__('Spider for 4xx / 5xx responses', 'pn-vr'), false, true],
-    [__('PDF run reports', 'pn-vr'), false, true],
-    [__('Emailed run reports', 'pn-vr'), false, true],
-    [__('Team users & project assignment', 'pn-vr'), false, true],
-    [__('Mandatory TOTP 2FA', 'pn-vr'), true, true],
+    [__('Projects', 'pn-vr'), '1', 5, 50],
+    [__('Comparisons', 'pn-vr'), '1', 5, 50],
+    [__('Runs per day', 'pn-vr'), '5', 50, 250],
+    [__('Pixel diff & expected content checks', 'pn-vr'), true, true, true],
+    [__('Per-URL HTTP basic auth', 'pn-vr'), true, true, true],
+    [__('Manual pass with note', 'pn-vr'), true, true, true],
+    [__('AI verdicts', 'pn-vr'), false, true, true],
+    [__('Spider for 4xx / 5xx responses', 'pn-vr'), false, true, true],
+    [__('PDF run reports', 'pn-vr'), false, true, true],
+    [__('Emailed run reports', 'pn-vr'), false, true, true],
+    [__('Team users & project assignment', 'pn-vr'), false, true, true],
+    [__('Mandatory TOTP 2FA', 'pn-vr'), true, true, true],
 ];
 
 // renders a table cell's value
@@ -157,15 +157,17 @@ $pnvr_price = static function (string $amount, string $unit): string {
                 <tr>
                     <th scope="col"><?php esc_html_e('Feature', 'pn-vr'); ?></th>
                     <th scope="col"><?php esc_html_e('Trial', 'pn-vr'); ?></th>
-                    <th scope="col" class="is-paid"><?php esc_html_e('Paid', 'pn-vr'); ?></th>
+                    <th scope="col" class="is-paid"><?php esc_html_e('Starter', 'pn-vr'); ?></th>
+                    <th scope="col" class="is-paid"><?php esc_html_e('Pro', 'pn-vr'); ?></th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($pnvr_rows as [$pnvr_label, $pnvr_trial, $pnvr_paid]) : ?>
+                <?php foreach ($pnvr_rows as [$pnvr_label, $pnvr_trial, $pnvr_starter, $pnvr_pro]) : ?>
                     <tr>
                         <th scope="row"><?php echo esc_html($pnvr_label); ?></th>
                         <td><?php echo $pnvr_cell($pnvr_trial); ?></td>
-                        <td class="is-paid"><?php echo $pnvr_cell($pnvr_paid); ?></td>
+                        <td class="is-paid"><?php echo $pnvr_cell($pnvr_starter); ?></td>
+                        <td class="is-paid"><?php echo $pnvr_cell($pnvr_pro); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
