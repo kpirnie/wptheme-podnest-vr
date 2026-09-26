@@ -2,7 +2,7 @@
 
 # get the user that owns our app here
 APP_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-APP_USER=$(stat -c '%U' "$APP_PATH")
+APP_USER=168567
 
 # make sure we own it
 chown -R $APP_USER:$APP_USER $PWD*;
@@ -28,7 +28,7 @@ rm -rf $APP_PATH/node_modules && npm install --prefix "$APP_PATH"
 npm run build --prefix "$APP_PATH"
 
 # generate the languar file(s)
-sudo -u $APP_USER wp i18n make-pot $APP_PATH languages/pn-vr.pot --domain=pn-vr
+sudo -u pdn podman exec pn-dev-pn-php wp i18n make-pot /var/www/html/wp-content/themes/pn-vr languages/pn-vr.pot --domain=pn-vr
 
 # make sure we own it
 chown -R $APP_USER:$APP_USER $PWD*;
