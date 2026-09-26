@@ -70,11 +70,10 @@
 }
 
 .pnvr-brand-pod {
-    color: var(--color-pn-accent);
+  color: var(--pn-blue);
 }
-
 .pnvr-brand-nest {
-    color: var(--color-pn-lime);
+  color: var(--pn-cyan);
 }
 
 .pnvr-brand-product {
