@@ -91,15 +91,21 @@
 
 /* scroll reveal, only hidden when scripts can reveal it again */
 @media (scripting: enabled) {
-    [data-scroll-reveal] {
+    [data-scroll-reveal],
+    .pnvr-reveal {
         opacity: 0;
         transform: translateY(24px);
         transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
-    [data-scroll-reveal].revealed {
+    [data-scroll-reveal].revealed,
+    .pnvr-reveal.revealed {
         opacity: 1;
         transform: none;
+    }
+
+    .pnvr-reveal-delay {
+        transition-delay: 0.15s;
     }
 }
 

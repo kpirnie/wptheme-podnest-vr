@@ -8,12 +8,14 @@
         "npm": ">=12.1.0"
     },
     "scripts": {
-        "build": "npm run build:css && npm run build:js",
+        "build": "npm run build:css && npm run build:js && npm run build:editor",
         "build:css": "tailwindcss -i src/css/main.css -o assets/css/theme.css --minify",
         "build:js": "esbuild src/js/main.js --bundle --minify --format=iife --target=es2017 --outfile=assets/js/theme.js",
-        "start": "npm run watch:css & npm run watch:js",
+        "build:editor": "esbuild src/js/editor/index.js --bundle --minify --format=iife --target=es2017 --outfile=assets/js/editor.js",
+        "start": "npm run watch:css & npm run watch:js & npm run watch:editor",
         "watch:css": "tailwindcss -i src/css/main.css -o assets/css/theme.css --watch",
-        "watch:js": "esbuild src/js/main.js --bundle --format=iife --target=es2017 --outfile=assets/js/theme.js --watch"
+        "watch:js": "esbuild src/js/main.js --bundle --format=iife --target=es2017 --outfile=assets/js/theme.js --watch",
+        "watch:editor": "esbuild src/js/editor/index.js --bundle --format=iife --target=es2017 --outfile=assets/js/editor.js --watch"
     },
     "devDependencies": {
         "@tailwindcss/cli": "^4.3.3",

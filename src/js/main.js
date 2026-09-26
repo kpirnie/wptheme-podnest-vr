@@ -17,6 +17,7 @@ import Modal from './components/modal.js';
 import { Navigation, ScrollSpy } from './components/navigation.js';
 import ScrollToTop from './components/scroll-to-top.js';
 import SmoothScroll, { BackToTop, InfiniteScroll, ScrollProgress, ScrollReveal } from './components/scroll.js';
+import { initSmoothScroll as smoothScroll } from './components/smooth-scroll.js';
 import Tabs from './components/tabs.js';
 import { Popover, Tooltip } from './components/tooltip.js';
 
@@ -66,6 +67,7 @@ const PNVR = {
         this.initNavigation();
         this.initScroll();
         this.initScrollToTop();
+        this.initSmoothScroll();
 
         // Dispatch ready event
         document.dispatchEvent(new CustomEvent('pnvr:ready', {
@@ -107,6 +109,13 @@ const PNVR = {
                 showProgress: button.classList.contains('back-to-top-progress')
             });
         }
+    },
+
+    /**
+     * Initialize smooth scrolling for in-page anchor links
+     */
+    initSmoothScroll() {
+        smoothScroll();
     },
 
     /**
@@ -244,14 +253,12 @@ const PNVR = {
      * Initialize scroll components
      */
     initScroll() {
-        // Smooth scroll
-        new SmoothScroll();
 
         // Back to top is handled by ScrollToTop, see initScrollToTop()
 
-        // Scroll reveal
-        if (document.querySelector('[data-scroll-reveal]')) {
-            new ScrollReveal();
+        // Scroll reveal, the attribute from templates or the class from block content
+        if (document.querySelector('[data-scroll-reveal], .pnvr-reveal')) {
+            new ScrollReveal({ selector: '[data-scroll-reveal], .pnvr-reveal' });
         }
 
         // Scroll progress

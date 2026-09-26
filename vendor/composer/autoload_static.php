@@ -38,6 +38,7 @@ class ComposerStaticInit49a4d4575e55becb62c502463758a48c
         'KP\\WPFieldFramework\\Sanitizer' => __DIR__ . '/..' . '/kevinpirnie/kpt-wpfieldframework/src/Sanitizer.php',
         'KP\\WPFieldFramework\\Storage' => __DIR__ . '/..' . '/kevinpirnie/kpt-wpfieldframework/src/Storage.php',
         'PNVR_Assets' => __DIR__ . '/../..' . '/work/inc/pnvr-assets.php',
+        'PNVR_Blocks' => __DIR__ . '/../..' . '/work/inc/pnvr-blocks.php',
         'PNVR_Contact' => __DIR__ . '/../..' . '/work/inc/pnvr-contact.php',
         'PNVR_Customizer' => __DIR__ . '/../..' . '/work/inc/pnvr-customizer.php',
         'PNVR_Icons' => __DIR__ . '/../..' . '/work/inc/pnvr-icons.php',

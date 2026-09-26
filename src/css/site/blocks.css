@@ -1,0 +1,72 @@
+/* -- Core button block ---------------------------------------- */
+/* the PN VR Primary / Secondary button styles, matching .pnvr-btn-primary / .pnvr-btn-secondary */
+.is-style-pnvr-primary > .wp-block-button__link,
+.is-style-pnvr-secondary > .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: var(--radius-pn);
+    cursor: pointer;
+    transition: opacity 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.is-style-pnvr-primary > .wp-block-button__link {
+    color: var(--color-pn-on-accent);
+    background: linear-gradient(135deg, var(--color-pn-accent), var(--color-pn-accent-dark));
+    border: none;
+    box-shadow: 0 0 24px var(--color-pn-accent-glow);
+}
+
+.is-style-pnvr-primary > .wp-block-button__link:hover {
+    color: var(--color-pn-on-accent);
+    text-decoration: none;
+    opacity: 0.9;
+    box-shadow: 0 0 40px var(--color-pn-accent-glow), 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.is-style-pnvr-secondary > .wp-block-button__link {
+    padding: 13px 28px;
+    color: var(--color-pn-lime);
+    background: transparent;
+    border: 1px solid color-mix(in oklab, var(--color-pn-lime) 30%, transparent);
+}
+
+.is-style-pnvr-secondary > .wp-block-button__link:hover {
+    color: var(--color-pn-lime);
+    text-decoration: none;
+    background: var(--color-pn-lime-dim);
+    border-color: var(--color-pn-lime);
+    box-shadow: 0 0 24px var(--color-pn-lime-glow);
+    transform: translateY(-2px);
+}
+
+.is-style-pnvr-primary > .wp-block-button__link:active,
+.is-style-pnvr-secondary > .wp-block-button__link:active {
+    transform: translateY(0);
+}
+
+.pnvr-block-btn-lg > .wp-block-button__link {
+    padding: 18px 36px;
+    font-size: 1.05rem;
+}
+
+/* -- Core buttons block --------------------------------------- */
+.wp-block-buttons.pnvr-hero-ctas {
+    gap: 16px;
+}
+
+@media (max-width: 640px) {
+    .pnvr-hero-ctas .wp-block-button,
+    .pnvr-hero-ctas .wp-block-button__link {
+        width: 100%;
+    }
+}

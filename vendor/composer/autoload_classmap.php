@@ -18,6 +18,7 @@ return array(
     'KP\\WPFieldFramework\\Sanitizer' => $vendorDir . '/kevinpirnie/kpt-wpfieldframework/src/Sanitizer.php',
     'KP\\WPFieldFramework\\Storage' => $vendorDir . '/kevinpirnie/kpt-wpfieldframework/src/Storage.php',
     'PNVR_Assets' => $baseDir . '/work/inc/pnvr-assets.php',
+    'PNVR_Blocks' => $baseDir . '/work/inc/pnvr-blocks.php',
     'PNVR_Contact' => $baseDir . '/work/inc/pnvr-contact.php',
     'PNVR_Customizer' => $baseDir . '/work/inc/pnvr-customizer.php',
     'PNVR_Icons' => $baseDir . '/work/inc/pnvr-icons.php',

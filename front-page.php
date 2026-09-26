@@ -1,23 +1,23 @@
 <?php
+
 /**
  * Front page template
+ * 
+ * The hero from the Customizer, then the front page's own block content
  * 
  * @package PodNest Visual Regressor
  */
 
-get_header(); 
+get_header();
 ?>
 
 <main id="main" class="site-main">
 
-    <?php get_template_part( 'template-parts/sections/hero' ); ?>
-    <?php get_template_part( 'template-parts/sections/marquee' ); ?>
-    <?php get_template_part( 'template-parts/sections/features' ); ?>
-    <?php get_template_part( 'template-parts/sections/how-it-works' ); ?>
-    <?php get_template_part( 'template-parts/sections/ai-judge' ); ?>
-    <?php get_template_part( 'template-parts/sections/security' ); ?>
-    <?php get_template_part( 'template-parts/sections/pricing' ); ?>
-    <?php get_template_part( 'template-parts/sections/cta' ); ?>
+    <?php get_template_part('template-parts/sections/hero'); ?>
+
+    <?php while (have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+    <?php endwhile; ?>
 
 </main>
 

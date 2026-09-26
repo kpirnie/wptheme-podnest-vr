@@ -1,6 +1,6 @@
 # VR Content: Post Content
 
-Content for the Marquee, Feature, and Pricing Tier posts under **VR Content** in wp-admin. Prices are placeholders. Set menu order with the **Order** field.
+Content for the Marquee, Feature, How It Works Step, Security Item, and Pricing Tier posts under **VR Content** in wp-admin. Prices are placeholders. Set menu order with the **Order** field.
 
 ## Marquee
 
@@ -34,6 +34,32 @@ The **Excerpt** is the card text. Pick the **Icon** in the Feature Card box.
 | 7 | Manual Pass with Note | Manual pass | Mark a known, acceptable difference as a pass and say why. The run's tallies follow, and the automatic result is kept alongside. |
 | 8 | Per-URL Basic Auth | Lock | Staging behind .htpasswd? Credentials are stored encrypted and scoped to that URL's own origin, the way a browser would use them. |
 | 9 | Live Dashboard | Dashboard | Runs, pass / warn / fail totals, failed projects, and recent spider findings, refreshing while runs are in progress. |
+
+## How It Works
+
+The **Excerpt** is the step text. Pick the **Icon** and fill in the **Output** in the How It Works Step box. Steps are numbered in menu order.
+
+| Order | Title | Icon | Output | Excerpt |
+|---|---|---|---|---|
+| 1 | Capture | Capture | baseline.png · candidate.png | Headless Chromium loads both URLs, with per-URL basic auth, frozen animations, and masked selectors for sliders and cookie banners, then screenshots them. |
+| 2 | Compare | Pixel diff | diff.png · 4.8% · 5/5 | A pixel-for-pixel diff with a tolerance and threshold, plus a check that every expected string is in the rendered text of both pages. |
+| 3 | Judge | AI | verdict: warn · 0.87 | The screenshots, the diff, the measurements, and both pages' text go to your AI model, which returns a verdict, a confidence, a summary, and its findings. |
+| 4 | Report | Report | run-42.pdf · emailed | Results land as each comparison finishes. Download the run as a PDF, email it to the project's recipients, or mark a known change as a manual pass. |
+
+## Security
+
+The **Excerpt** is the card text. Pick the **Icon** in the Security Card box.
+
+| Order | Title | Icon | Excerpt |
+|---|---|---|---|
+| 1 | Mandatory TOTP 2FA | Shield | Every account enrolls an authenticator, with twelve single-use recovery codes and optional remembered browsers. |
+| 2 | Argon2id Passwords | Key | Passwords are hashed with Argon2id, and sessions live server-side with a hard seven-day ceiling. |
+| 3 | Encrypted Secrets | Lock | Basic auth credentials, API keys, and the SMTP password are encrypted at rest, so a copy of the database is not a copy of your secrets. |
+| 4 | Signed Screenshot Links | Signed link | Screenshots are only served with a signed token that covers one run and lapses after an hour. |
+| 5 | Throttling & Lockout | Clock | Sign-in and 2FA attempts are limited per address and per account, and every form post carries a CSRF token. |
+| 6 | Private Network Guard | Network | URLs that resolve to private, loopback, or reserved addresses are refused when they are saved, and again when they are captured. |
+| 7 | Roles & Assignment | Users | Admin, Manager, Trial, and User levels, with project assignment deciding who sees what. |
+| 8 | Full Audit Log | Audit list | Every change is recorded with who, when, and from where, plus the values before and after. Secrets are only noted as changed. |
 
 ## Pricing Tiers
 

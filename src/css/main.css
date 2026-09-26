@@ -54,5 +54,8 @@
 @import "./site/page.css" layer(components);
 @import "./site/contact.css" layer(components);
 
+/* Core block overrides, unlayered so they win over the core block styles */
+@import "./site/blocks.css";
+
 /* Utilities */
 @import "./components/utilities.css" layer(utilities);
