@@ -2,7 +2,7 @@
 .pnvr-page-hero {
     position: relative;
     overflow: hidden;
-    padding: 60px 0 50px;
+    padding: 60px 0 0px;
     text-align: center;
 }
 
@@ -74,7 +74,7 @@
 }
 
 /* -- Full width page content ---------------------------------- */
-/* section blocks span the page, everything else sits in the reading column */
+/* section blocks span the page, everything else lines up with the section containers */
 .pnvr-page-content {
     font-size: 1rem;
     line-height: 1.8;
@@ -82,9 +82,39 @@
 }
 
 .pnvr-page-content > :not(.pnvr-section) {
-    width: min(820px, calc(100% - 2 * clamp(16px, 4vw, 75px)));
+    width: calc(100% - 2 * clamp(16px, 4vw, 75px));
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (min-width: 40rem) {
+    .pnvr-page-content > :not(.pnvr-section) {
+        width: calc(40rem - 2 * clamp(16px, 4vw, 75px));
+    }
+}
+
+@media (min-width: 48rem) {
+    .pnvr-page-content > :not(.pnvr-section) {
+        width: calc(48rem - 2 * clamp(16px, 4vw, 75px));
+    }
+}
+
+@media (min-width: 64rem) {
+    .pnvr-page-content > :not(.pnvr-section) {
+        width: calc(64rem - 2 * clamp(16px, 4vw, 75px));
+    }
+}
+
+@media (min-width: 80rem) {
+    .pnvr-page-content > :not(.pnvr-section) {
+        width: calc(80rem - 2 * clamp(16px, 4vw, 75px));
+    }
+}
+
+@media (min-width: 96rem) {
+    .pnvr-page-content > :not(.pnvr-section) {
+        width: calc(96rem - 2 * clamp(16px, 4vw, 75px));
+    }
 }
 
 .pnvr-page-content > :where(:not(.pnvr-section) + :not(.pnvr-section)) {
