@@ -47,7 +47,7 @@ if (! class_exists('PNVR_Blocks')) {
         public const EDITOR_HANDLE = 'pnvr-blocks-editor';
 
         /**
-         * The blocks: name => [ title, dashicon, template part ]
+         * The blocks: name => [ title, dashicon, template part or render callable ]
          * @var array
          */
         private const BLOCKS = [
@@ -58,6 +58,7 @@ if (! class_exists('PNVR_Blocks')) {
             'pnvr/pricing' => ['Pricing', 'money-alt', 'template-parts/sections/pricing'],
             'pnvr/ai-judge-points' => ['AI Judge Points', 'yes-alt', 'template-parts/sections/ai-judge'],
             'pnvr/ai-review' => ['AI Review Illustration', 'format-image', 'template-parts/illustrations/ai-review'],
+            'pnvr/contact-form' => ['Contact Form', 'email', ['PNVR_Contact', 'render_form']],
         ];
 
         /**
@@ -87,7 +88,7 @@ if (! class_exists('PNVR_Blocks')) {
                 true
             );
 
-            // loop the blocks and register them, rendered from their template part
+            // loop the blocks and register them, rendered from their template part or callable
             foreach (self::BLOCKS as $name => [$title, $icon, $template]) {
                 register_block_type($name, [
                     'api_version' => 3,
@@ -97,6 +98,11 @@ if (! class_exists('PNVR_Blocks')) {
                     'supports' => ['html' => false],
                     'editor_script_handles' => [self::EDITOR_HANDLE],
                     'render_callback' => static function () use ($template): string {
+
+                        // a callable renders itself
+                        if (is_callable($template)) {
+                            return (string) call_user_func($template);
+                        }
 
                         // capture the template part's output
                         ob_start();

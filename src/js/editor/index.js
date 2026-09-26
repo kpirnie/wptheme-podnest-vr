@@ -24,7 +24,8 @@ const blocks = [
     ['pnvr/security', __('Security Grid', 'pn-vr'), 'shield', __('The security cards. Cards come from VR Content > Security.', 'pn-vr')],
     ['pnvr/pricing', __('Pricing', 'pn-vr'), 'money-alt', __('The tier cards and the Trial vs Paid table. Tiers come from VR Content > Pricing.', 'pn-vr')],
     ['pnvr/ai-judge-points', __('AI Judge Points', 'pn-vr'), 'yes-alt', __('What the AI review adds, and the pass / warn / fail legend.', 'pn-vr')],
-    ['pnvr/ai-review', __('AI Review Illustration', 'pn-vr'), 'format-image', __('The illustrated AI review panel.', 'pn-vr')]
+    ['pnvr/ai-review', __('AI Review Illustration', 'pn-vr'), 'format-image', __('The illustrated AI review panel.', 'pn-vr')],
+    ['pnvr/contact-form', __('Contact Form', 'pn-vr'), 'email', __('The contact form. Plan links pre-fill its subject, and submissions land under Form Items.', 'pn-vr')]
 ];
 
 /**
